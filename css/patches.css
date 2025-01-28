@@ -1,0 +1,125 @@
+:root {
+    /* --primary-color: #1d4ed8; */
+    --primary-color: #4B9536;
+    --secondary-color: #facc15;
+    --tertiary-color: #10b981;
+    --text-color: #ffffff;
+    --background-color: #f8fafc;
+}
+
+
+
+.container {
+    /* width: 90%; */
+    margin: 0 auto;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    background: url('https://www.sedigitizing.com/images/port/custom-patches/bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100px;
+    overflow: hidden;
+}
+
+/* 
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: 1;
+} */
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-color);
+    padding-top: 80px;
+}
+
+.banner-content h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Content Section */
+.patches-content {
+    padding: 40px 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Patches Gallery */
+.patches-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.patch-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 45%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.patch-image:hover {
+    transform: scale(1.05);
+}
+
+.patch-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}

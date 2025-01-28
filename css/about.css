@@ -1,0 +1,66 @@
+.about-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Text Section Styles */
+.about-more {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.more-text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-more h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-more p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+

@@ -1,0 +1,127 @@
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 20px);
+        /* 2 images per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 0 0 calc(100% - 20px);
+        /* 1 image per row on very small screens */
+        max-width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .digitizing-features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        max-width: 100%;
+    }
+
+    .hamburger {
+        color: black;
+    }
+
+    .navbar .navbar-links-right,
+    .navbar .navbar-links-left {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar-links-left,
+    .navbar-links-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-container {
+        flex-direction: row;
+        /* Switch to row layout for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-links-left,
+    .navbar-links-right {
+        display: none;
+    }
+
+    .navbar-logo {
+        width: 60px;
+    }
+
+    .navbar-logo a {
+        margin-right: -140px;
+        font-size: 14px;
+    }
+
+    .navbar-logo img {
+        width: 40%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .digitizing-features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .vector-art-service .heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vector-art-service .heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-bottom: 20px;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .more-text-container {
+        text-align: center;
+    }
+}
