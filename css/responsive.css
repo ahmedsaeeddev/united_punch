@@ -109,7 +109,9 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .content-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         text-align: center;
     }
 
