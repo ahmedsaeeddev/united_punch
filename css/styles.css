@@ -15,7 +15,7 @@ body {
 .top-bar {
   background-color: var(--secondary-color);
   color: var(--text-color);
-  height: 50px;
+  height: 50px; 
   display: flex;
   flex-direction: row;
   align-items: center;

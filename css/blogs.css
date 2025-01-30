@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #4F7DBE;
+    --secondary-color: #DAE3E5;
+    --tertiary-color: #10b981;
+    --text-color: #FAFAFA;
+    --background-color: #FAFAFD;
+}
+
+.blogs-section .blog {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-image {
+    width: 90%;
+    margin: 40px 0;
+}
+
+.blog-image img {
+    width: 100%;
+}
+
+.main {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+}

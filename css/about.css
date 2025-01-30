@@ -4,21 +4,28 @@
     justify-content: center;
     padding: 40px 20px;
     background-color: var(--background-color);
+    text-align: center;
+    flex-wrap: wrap;
+    /* Allows content to stack on smaller screens */
 }
 
 .content-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* Spaces items evenly */
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* Makes the layout responsive */
     gap: 20px;
-    align-items: center;
     max-width: 1200px;
     width: 100%;
+    padding: 0 15px;
 }
 
 .about-text {
     max-width: 500px;
+    flex: 1;
+    /* Makes it responsive with equal space */
 }
 
 .about-text h1 {
@@ -30,7 +37,15 @@
 .about-text p {
     font-size: 1rem;
     color: #555;
+    line-height: 1.6;
+    /* Improves readability */
     margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    /* Ensures the image takes equal space */
+    max-width: 500px;
 }
 
 .about-image img {
@@ -40,7 +55,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional Text Section Styles */
+/* Additional Section Styles */
 .about-more {
     background-color: var(--background-color);
     padding: 40px 20px;
@@ -50,6 +65,8 @@
 .more-text-container {
     max-width: 800px;
     margin: 0 auto;
+    text-align: justify;
+    /* Improves readability of longer text */
 }
 
 .about-more h2 {
@@ -62,7 +79,6 @@
 .about-more p {
     font-size: 1rem;
     color: #444;
+    line-height: 1.6;
     margin-bottom: 15px;
-    text-align: justify;
 }
-
