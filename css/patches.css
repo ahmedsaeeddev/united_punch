@@ -1,7 +1,6 @@
 :root {
-    /* --primary-color: #1d4ed8; */
-    --primary-color: #4B9536;
-    --secondary-color: #facc15;
+    --primary-color: #A8E1B9;
+    --secondary-color: #8F9FA6;
     --tertiary-color: #10b981;
     --text-color: #ffffff;
     --background-color: #f8fafc;
@@ -10,7 +9,6 @@
 
 
 .container {
-    /* width: 90%; */
     margin: 0 auto;
 }
 

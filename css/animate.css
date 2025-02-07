@@ -1,0 +1,258 @@
+/* Banner Fade-in Animation */
+.banner-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Make it visible when it enters the viewport */
+.banner-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Banner Image Animation */
+.banner-image img {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Apply animation when visible */
+.banner-container.visible .banner-image img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Banner Button Hover Effect */
+.banner-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* General Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Fade-in on Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom-in Animation */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Zoom-in Effect on Scroll */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Navbar Fade-in */
+.navbar {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.navbar.visible {
+    opacity: 1;
+}
+
+/* Image Hover Effect */
+.gallery-item img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Gallery Images - Scroll Animation */
+.gallery-item {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.gallery-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Modal Fade-in Effect */
+.modal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: scale(0.8);
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.newsletter-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Newsletter Input Fields */
+.newsletter-form input {
+    transition: all 0.3s ease-in-out;
+}
+
+.newsletter-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Newsletter Button Hover */
+.newsletter-button {
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.newsletter-button:hover {
+    background: #0056b3;
+}
+
+.newsletter-button:active {
+    transform: scale(0.95);
+}
+
+/* Vector Art Section */
+.vector-art-service {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.vector-art-service.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Footer */
+.footer {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.footer.visible {
+    opacity: 1;
+}
+
+/* Footer Links Hover */
+.footer-section a {
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.footer-section a:hover {
+    color: #0056b3;
+    transform: translateX(5px);
+}
+
+/* Social Icons Hover */
+.social-icons a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Digitizing Section - Scroll Fade-in */
+.digitizing-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Make it visible when it enters the viewport */
+.digitizing-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feature Boxes Animation */
+.feature-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Staggered Animation for Features */
+.feature-box:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.feature-box:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.feature-box:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.feature-box:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+.feature-box:nth-child(5) {
+    transition-delay: 1s;
+}
+
+.feature-box:nth-child(6) {
+    transition-delay: 1.2s;
+}
+
+/* Apply animation when visible */
+.digitizing-section.visible .feature-box {
+    opacity: 1;
+    transform: translateY(0);
+}

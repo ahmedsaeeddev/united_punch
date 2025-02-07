@@ -1,0 +1,114 @@
+/* General Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in from Bottom */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale Up Animation */
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-in Elements */
+.top-bar,
+.navbar,
+.blogs-section,
+.footer {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Navbar Animation */
+.navbar {
+    animation-delay: 0.3s;
+}
+
+/* Blog Section Animation */
+.blog {
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Footer Animation */
+.footer {
+    animation-delay: 1s;
+}
+
+/* Image Animation */
+.blog-image img {
+    opacity: 0;
+    animation: scaleUp 0.8s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Footer Section Fade-in */
+.footer-section {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+
+/* Footer Icons Animation */
+.social-icons a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Menu Slide-in */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu {
+    opacity: 0;
+    animation: slideDown 0.4s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Smooth Hover Effect on Navbar Links */
+.navbar a {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #4F7DBE;
+    transition: color 0.3s ease-in-out;
+}
