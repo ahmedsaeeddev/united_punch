@@ -1,15 +1,31 @@
 :root {
-    --primary-color: #A8E1B9;
-    --secondary-color: #8F9FA6;
-    --tertiary-color: #10b981;
-    --text-color: #ffffff;
-    --background-color: #f8fafc;
+    --primary-color: #4F7DBE;
+    --secondary-color: #566577;
+    --tertiary-color: #1053b9;
+    --text-color: #fbfcff;
+    --background-color: #FAFAFD;
+    --white-color: #FAFFFF;
 }
 
-
+[data-theme="dark"] {
+    --primary-color: #a6b6ff;
+    --secondary-color: #7da5dd;
+    --tertiary-color: #b0bbff;
+    --text-color: #003e77;
+    --white-color: #000000;
+    --background-color: #003e77;
+}
 
 .container {
     margin: 0 auto;
+}
+
+.blogs-section {
+    padding: 10px;
+}
+
+.blogs-section p {
+    color: var(--secondary-color) !important;
 }
 
 /* Banner Section */
@@ -20,19 +36,6 @@
     height: 100px;
     overflow: hidden;
 }
-
-/* 
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    filter: blur(10px);
-    z-index: 1;
-} */
 
 .banner-content {
     position: relative;
@@ -55,7 +58,7 @@
 .patches-content {
     padding: 40px 0;
     background-color: var(--text-color);
-    color: var(--background-color);
+    color: var(--white-color) !important;
 }
 
 .section-title {
@@ -75,7 +78,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--white-color) !important;
 }
 
 /* Patches Gallery */

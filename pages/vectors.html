@@ -37,6 +37,7 @@
                 <a href="../pages/vectors.html">Vectors</a>
                 <a href="../pages/patches.html">Patches</a>
                 <a href="../pages/embroidery.html">Embroidery</a>
+                <button class="theme-toggle" id="themeToggle">☀ / 🌙</button>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -52,42 +53,44 @@
         </div>
     </nav>
     <!-- Blogs Section -->
-<section class="blogs-section">
-    <!-- Blog 1 -->
-    <div class="blog">
-        <div class="blog-content">
-            <h2>Mastering Vector Conversion for Flawless Embroidery</h2>
-            <p class="main-paragraph">
-                <span class="main">Vector conversion</span> forms the backbone of premium embroidery digitizing services. 
-                Our team utilizes <span class="main">AI-powered tracing algorithms</span> combined with manual 
-                refinement to convert even low-resolution logos into production-ready embroidery files. 
-                This dual approach ensures we capture every detail while maintaining 
-                <span class="main">stitch economy</span> - crucial for reducing thread consumption without 
-                compromising visual impact.
-            </p>
-            <p class="main-paragraph">
-                For intricate <span class="main">patch designs</span>, our digitizers employ 
-                <span class="main">layer-based sequencing</span> that mirrors commercial embroidery 
-                machine operations. This method allows us to predict and prevent 
-                <span class="main">thread tension issues</span> during production. Recent advancements 
-                in our <span class="main">color matching system</span> can now accurately replicate 
-                Pantone shades using composite thread blends, achieving 98.7% color accuracy 
-                across various lighting conditions.
-            </p>
-            <p class="main-paragraph">
-                Our <span class="main">small text optimization</span> techniques enable crisp 
-                3mm lettering on patches - a industry breakthrough previously limited to 5mm. 
-                Through <span class="main">parametric underlay adjustments</span>, we've successfully 
-                digitized complex medical insignias with 0.2mm stitch precision, maintaining 
-                legibility even after 50+ industrial washes. Case studies show our vector 
-                conversion methods reduce embroidery machine downtime by 40% compared to 
-                traditional digitizing approaches.
-            </p>
+    <section class="blogs-section">
+        <!-- Blog 1 -->
+        <div class="blog">
+            <div class="blog-content">
+                <h2>Mastering Vector Conversion for Flawless Embroidery</h2>
+                <p class="main-paragraph">
+                    <span class="main">Vector conversion</span> forms the backbone of premium embroidery digitizing
+                    services.
+                    Our team utilizes <span class="main">AI-powered tracing algorithms</span> combined with manual
+                    refinement to convert even low-resolution logos into production-ready embroidery files.
+                    This dual approach ensures we capture every detail while maintaining
+                    <span class="main">stitch economy</span> - crucial for reducing thread consumption without
+                    compromising visual impact.
+                </p>
+                <p class="main-paragraph">
+                    For intricate <span class="main">patch designs</span>, our digitizers employ
+                    <span class="main">layer-based sequencing</span> that mirrors commercial embroidery
+                    machine operations. This method allows us to predict and prevent
+                    <span class="main">thread tension issues</span> during production. Recent advancements
+                    in our <span class="main">color matching system</span> can now accurately replicate
+                    Pantone shades using composite thread blends, achieving 98.7% color accuracy
+                    across various lighting conditions.
+                </p>
+                <p class="main-paragraph">
+                    Our <span class="main">small text optimization</span> techniques enable crisp
+                    3mm lettering on patches - a industry breakthrough previously limited to 5mm.
+                    Through <span class="main">parametric underlay adjustments</span>, we've successfully
+                    digitized complex medical insignias with 0.2mm stitch precision, maintaining
+                    legibility even after 50+ industrial washes. Case studies show our vector
+                    conversion methods reduce embroidery machine downtime by 40% compared to
+                    traditional digitizing approaches.
+                </p>
+            </div>
+            <div class="blog-image">
+                <img src="https://svgconverter.app/src/media/img/22/sketchToVector-min.png"
+                    alt="Vector Conversion Process">
+            </div>
         </div>
-        <div class="blog-image">
-            <img src="https://svgconverter.app/src/media/img/22/sketchToVector-min.png" alt="Vector Conversion Process">
-        </div>
-    </div>
 
     </section>
     <!-- Footer -->
@@ -159,47 +162,28 @@
         const mobileMenu = document.getElementById("mobileMenu");
         mobileMenu.classList.toggle("active");
     }
-    // JavaScript for Modal and Image Navigation
-    let currentImageIndex = 0;
-    const images = document.querySelectorAll(".gallery-item img");
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
 
-    // Open Modal
-    function openModal(index) {
-        currentImageIndex = index;
-        modalImage.src = images[currentImageIndex].src;
-        modal.style.display = "flex";
+    function toggleMenu() {
+        let menu = document.getElementById("mobileMenu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
 
-    // Close Modal
-    function closeModal() {
-        modal.style.display = "none";
-    }
+    // ✅ Theme Toggle Functionality
+    const themeToggle = document.getElementById("themeToggle");
+    const html = document.documentElement; // Select <html> for setting data-theme
 
-    // Change Image
-    function changeImage(direction) {
-        currentImageIndex += direction;
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem("theme") || "light";
+    html.setAttribute("data-theme", savedTheme);
 
-        // Loop images if out of bounds
-        if (currentImageIndex < 0) {
-            currentImageIndex = images.length - 1; // Go to the last image
-        } else if (currentImageIndex >= images.length) {
-            currentImageIndex = 0; // Go to the first image
-        }
+    // Toggle Theme on Button Click
+    themeToggle.addEventListener("click", function () {
+        let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
 
-        // Update the modal image source
-        modalImage.src = images[currentImageIndex].src;
-    }
-
-    // Close Modal When Clicking Outside the Content
-    modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
+        // Apply New Theme
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save preference
     });
-
-
 </script>
 
 </html>

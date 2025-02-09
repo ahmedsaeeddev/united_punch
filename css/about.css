@@ -1,3 +1,21 @@
+:root {
+    --primary-color: #4F7DBE;
+    --secondary-color: #a6b6ff;
+    --tertiary-color: #1053b9;
+    --text-color: #fbfcff;
+    --background-color: #FAFAFD;
+    --white-color: #FAFFFF;
+}
+
+[data-theme="dark"] {
+    --primary-color: #a6b6ff;
+    --secondary-color: #c3dcff;
+    --tertiary-color: #b0bbff;
+    --text-color: #003e77;
+    --white-color: #ffffff;
+    --background-color: #003e77;
+}
+
 .about-banner {
     display: flex;
     align-items: center;
@@ -6,7 +24,6 @@
     background-color: var(--background-color);
     text-align: center;
     flex-wrap: wrap;
-    /* Allows content to stack on smaller screens */
 }
 
 .content-container {
@@ -36,7 +53,7 @@
 
 .about-text p {
     font-size: 1rem;
-    color: #555;
+    color: var(--primary-color);
     line-height: 1.6;
     /* Improves readability */
     margin-bottom: 15px;
@@ -52,7 +69,7 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px var(--secondary-color);
 }
 
 /* Additional Section Styles */
@@ -78,7 +95,7 @@
 
 .about-more p {
     font-size: 1rem;
-    color: #444;
+    color: var(--primary-color);
     line-height: 1.6;
     margin-bottom: 15px;
 }

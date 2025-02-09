@@ -22,6 +22,7 @@
         </div>
     </div>
 
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
@@ -37,6 +38,7 @@
                 <a href="./pages/vectors.html">Vectors</a>
                 <a href="./pages/patches.html">Patches</a>
                 <a href="./pages/embroidery.html">Embroidery</a>
+                <button class="theme-toggle" id="themeToggle">☀ / 🌙</button>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -51,6 +53,8 @@
             <a href="./pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
         </div>
     </nav>
+
+    <!-- 🔵 Theme Toggle Button -->
 
     <!-- Banner Section -->
     <section class="banner">
@@ -82,37 +86,37 @@
             <div class="feature-box">
                 <i class="fas fa-bolt"></i>
                 <h3>Lightning Fast Delivery</h3>
-                <p>Hamari expert team aapke designs ko sirf 3 se 4 ghanto mein digitize kar sakti hai, taake aap kaam ko
+                <p class="main_paragraph">Hamari expert team aapke designs ko sirf 3 se 4 ghanto mein digitize kar sakti hai, taake aap kaam ko
                     tez aur behtareen tareeke se complete kar sakein.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-star"></i>
                 <h3>High-Quality Precision</h3>
-                <p>Har chhoti si chhoti detail ka khayal rakhte hue, hum aapke designs ko bilkul perfect aur
+                <p class="main_paragraph">Har chhoti si chhoti detail ka khayal rakhte hue, hum aapke designs ko bilkul perfect aur
                     pixel-perfect format mein convert karte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-users"></i>
                 <h3>Skilled & Experienced Team</h3>
-                <p>Hamare professional digitizers aur vector artists har project ko industry standards ke mutabiq
+                <p class="main_paragraph">Hamare professional digitizers aur vector artists har project ko industry standards ke mutabiq
                     complete karne ka experience rakhte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-thumbs-up"></i>
                 <h3>Customer Satisfaction</h3>
-                <p>Hamari pehli priority aapki khushi hai! Hum har kaam ko perfection aur dedication ke sath deliver
+                <p class="main_paragraph">Hamari pehli priority aapki khushi hai! Hum har kaam ko perfection aur dedication ke sath deliver
                     karte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-globe"></i>
                 <h3>Global Reach</h3>
-                <p>Chaahe aap kisi bhi country se hoon, humari services har jagah available hain. Aap kahin bhi hoon,
+                <p class="main_paragraph">Chaahe aap kisi bhi country se hoon, humari services har jagah available hain. Aap kahin bhi hoon,
                     hum aapke liye yahan hain!</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
                 <h3>Why Choose Us?</h3>
-                <p>Hum sirf service nahi dete, balki ek behtareen experience provide karte hain jisme fast delivery,
+                <p class="main_paragraph">Hum sirf service nahi dete, balki ek behtareen experience provide karte hain jisme fast delivery,
                     best quality aur 24/7 support shamil hai.</p>
             </div>
         </div>
@@ -258,9 +262,30 @@
 
     </section>
 
+    <script src="./scripts/index.js"></script>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
 
+        // ✅ Theme Toggle Functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const html = document.documentElement; // Select <html> for setting data-theme
 
-   <script src="./scripts/index.js"></script>
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem("theme") || "light";
+        html.setAttribute("data-theme", savedTheme);
+
+        // Toggle Theme on Button Click
+        themeToggle.addEventListener("click", function () {
+            let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+            // Apply New Theme
+            html.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme); // Save preference
+        });
+    </script>
 </body>
 
 </html>

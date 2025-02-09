@@ -1,5 +1,5 @@
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 862px) {
     .gallery-item {
         flex: 0 0 calc(50% - 20px);
         /* 2 images per row */
@@ -15,7 +15,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 862px) {
     .digitizing-features {
         flex-direction: column;
     }
@@ -35,7 +35,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 862px) {
 
     .navbar-links-left,
     .navbar-links-right {
@@ -54,7 +54,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 862px) {
 
     .navbar-links-left,
     .navbar-links-right {
