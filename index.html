@@ -32,7 +32,7 @@
                 <a href="./pages/blogs.html">Blogs</a>
             </div>
             <div class="navbar-logo">
-                <a href="../index.html">UNITED<img src="../up.png" alt="">PUNCH</a>
+                <a href="../index.html">UNITED<img src="./assets/img/logo.png" alt="">PUNCH</a>
             </div>
             <div class="navbar-links-right">
                 <a href="./pages/vectors.html">Vectors</a>
@@ -51,7 +51,9 @@
             <a href="./pages/vectors.html" onclick="toggleMenu()">Vectors</a>
             <a href="./pages/patches.html" onclick="toggleMenu()">Patches</a>
             <a href="./pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
+            <button class="theme-toggle" id="themeToggle">☀ / 🌙</button>
         </div>
+
     </nav>
 
     <!-- 🔵 Theme Toggle Button -->
@@ -86,37 +88,43 @@
             <div class="feature-box">
                 <i class="fas fa-bolt"></i>
                 <h3>Lightning Fast Delivery</h3>
-                <p class="main_paragraph">Hamari expert team aapke designs ko sirf 3 se 4 ghanto mein digitize kar sakti hai, taake aap kaam ko
+                <p class="main_paragraph">Hamari expert team aapke designs ko sirf 3 se 4 ghanto mein digitize kar sakti
+                    hai, taake aap kaam ko
                     tez aur behtareen tareeke se complete kar sakein.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-star"></i>
                 <h3>High-Quality Precision</h3>
-                <p class="main_paragraph">Har chhoti si chhoti detail ka khayal rakhte hue, hum aapke designs ko bilkul perfect aur
+                <p class="main_paragraph">Har chhoti si chhoti detail ka khayal rakhte hue, hum aapke designs ko bilkul
+                    perfect aur
                     pixel-perfect format mein convert karte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-users"></i>
                 <h3>Skilled & Experienced Team</h3>
-                <p class="main_paragraph">Hamare professional digitizers aur vector artists har project ko industry standards ke mutabiq
+                <p class="main_paragraph">Hamare professional digitizers aur vector artists har project ko industry
+                    standards ke mutabiq
                     complete karne ka experience rakhte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-thumbs-up"></i>
                 <h3>Customer Satisfaction</h3>
-                <p class="main_paragraph">Hamari pehli priority aapki khushi hai! Hum har kaam ko perfection aur dedication ke sath deliver
+                <p class="main_paragraph">Hamari pehli priority aapki khushi hai! Hum har kaam ko perfection aur
+                    dedication ke sath deliver
                     karte hain.</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-globe"></i>
                 <h3>Global Reach</h3>
-                <p class="main_paragraph">Chaahe aap kisi bhi country se hoon, humari services har jagah available hain. Aap kahin bhi hoon,
+                <p class="main_paragraph">Chaahe aap kisi bhi country se hoon, humari services har jagah available hain.
+                    Aap kahin bhi hoon,
                     hum aapke liye yahan hain!</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
                 <h3>Why Choose Us?</h3>
-                <p class="main_paragraph">Hum sirf service nahi dete, balki ek behtareen experience provide karte hain jisme fast delivery,
+                <p class="main_paragraph">Hum sirf service nahi dete, balki ek behtareen experience provide karte hain
+                    jisme fast delivery,
                     best quality aur 24/7 support shamil hai.</p>
             </div>
         </div>
@@ -211,7 +219,7 @@
             <div class="footer-container">
                 <!-- Logo and Working Hours -->
                 <div class="footer-section">
-                    <img src="../up.png" alt="United Punch Logo" class="footer-logo">
+                    <img src="./assets/img/logo.png" alt="United Punch Logo" class="footer-logo">
                     <p>Hours: Monday-Friday<br> 24 / 7 Working.</p>
                     <div class="social-icons">
                         <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
@@ -266,7 +274,7 @@
     <script>
         function toggleMenu() {
             let menu = document.getElementById("mobileMenu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
         }
 
         // ✅ Theme Toggle Functionality
