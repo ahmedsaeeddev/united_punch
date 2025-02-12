@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/patches.css">
+    <!-- <link rel="stylesheet" href="../css/blogs.css"> -->
     <link rel="stylesheet" href="../css/patchesAnimate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -17,7 +18,7 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar">
-                <div>Email: info@example.com</div>
+                <div>Email: contact@unitedpunch.com</div>
                 <div>Contact: +123-456-7890</div>
             </div>
         </div>
@@ -27,19 +28,18 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-links-left">
-                <a href="../index.html">Home</a>
+                <a href="./index.html">Home</a>
                 <a href="../pages/about.html">About Us</a>
                 <a href="../pages/blogs.html">Blogs</a>
             </div>
             <div class="navbar-logo">
                 <a href="../index.html">UNITED<img src="../assets/img/logo.png" alt="">PUNCH</a>
-
+                <a class="theme-toggle" id="themeToggle">🌙</a>
             </div>
             <div class="navbar-links-right">
                 <a href="../pages/vectors.html">Vectors</a>
                 <a href="../pages/patches.html">Patches</a>
                 <a href="../pages/embroidery.html">Embroidery</a>
-                <button class="theme-toggle" id="themeToggle">☀ / 🌙</button>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -53,6 +53,7 @@
             <a href="../pages/patches.html" onclick="toggleMenu()">Patches</a>
             <a href="../pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
         </div>
+
     </nav>
     <!-- Blogs Section -->
     <section class="blogs-section">
@@ -186,7 +187,7 @@
 <script>
     function toggleMenu() {
         let menu = document.getElementById("mobileMenu");
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
 
     // ✅ Theme Toggle Functionality

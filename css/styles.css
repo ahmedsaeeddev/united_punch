@@ -9,7 +9,7 @@
 
 [data-theme="dark"] {
   --primary-color: #090909;
-  --secondary-color: #E1C61F;
+  --secondary-color: #ccb100;
   --tertiary-color: #e7a600;
   --text-color: #E2BC21;
   --background-color: #E2BC21;
@@ -26,12 +26,24 @@ a:hover {
   font-weight: bold;
 }
 
+.social-icons a:hover i {
+  color: var(--white-color) !important;
+  border-radius: 100%;
+}
+.social-icons a:hover i {
+  color: var(--white-color) !important;
+}
+
 .navbar-links-right button {
   background-color: transparent;
   outline: none;
   border: none;
 }
 
+.navbar-logo {
+  display: flex;
+  gap: 170px;
+}
 
 body {
   margin: 0;
@@ -749,6 +761,11 @@ body {
   width: 70%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
 .footer {
   background-color: var(--text-color);
   border-top: 2px solid var(--primary-color);
@@ -854,4 +871,8 @@ h2 {
   margin-bottom: 40px !important;
   -webkit-text-stroke: 1px var(--primary-color);
   text-stroke: 4px var(--primary-color);
+}
+
+.theme-toggle {
+  filter: drop-shadow(7px 1px 4px var(--primary-color));
 }

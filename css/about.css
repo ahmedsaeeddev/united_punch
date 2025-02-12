@@ -1,19 +1,19 @@
 :root {
-    --primary-color: #4F7DBE;
-    --secondary-color: #a6b6ff;
-    --tertiary-color: #1053b9;
+    --primary-color: #E1BC21;
+    --secondary-color: #090909;
+    --tertiary-color: #e7a600;
     --text-color: #fbfcff;
     --background-color: #FAFAFD;
     --white-color: #FAFFFF;
 }
 
 [data-theme="dark"] {
-    --primary-color: #a6b6ff;
-    --secondary-color: #c3dcff;
-    --tertiary-color: #b0bbff;
-    --text-color: #003e77;
-    --white-color: #ffffff;
-    --background-color: #003e77;
+    --primary-color: #090909;
+    --secondary-color: #ccb100;
+    --tertiary-color: #e7a600;
+    --text-color: #E2BC21;
+    --background-color: #E2BC21;
+    --white-color: #000000;
 }
 
 .about-banner {

@@ -1,19 +1,19 @@
 :root {
-    --primary-color: #4F7DBE;
-    --secondary-color: #a6b6ff;
-    --tertiary-color: #1053b9;
+    --primary-color: #E1BC21;
+    --secondary-color: #090909;
+    --tertiary-color: #e7a600;
     --text-color: #fbfcff;
     --background-color: #FAFAFD;
-    --white-color: #1b1b1b;
+    --white-color: #1a1818;
 }
 
 [data-theme="dark"] {
-    --primary-color: #a6b6ff;
-    --secondary-color: #4F7DBE;
-    --tertiary-color: #b0bbff;
-    --text-color: #003e77;
-    --white-color: #c9c9c9;
-    --background-color: #003e77;
+    --primary-color: #090909;
+    --secondary-color: #ccb100;
+    --tertiary-color: #e7a600;
+    --text-color: #E2BC21;
+    --background-color: #E2BC21;
+    --white-color: #000000;
 }
 
 .blogs-section .blog {
@@ -25,11 +25,11 @@
     align-items: center;
     justify-content: space-between;
 }
-
+/* 
 .blog-image {
     width: 90%;
     margin: 40px 0;
-}
+} */
 
 .blog-image img {
     width: 100%;
