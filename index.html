@@ -2,203 +2,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>United Punch - Where your Digitizing Need Fullfills</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>United Punch - Where your Digitizing Need Fulfills</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Include i18next CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 </head>
 
 <body>
+    <!-- Language Switcher with 8 flags -->
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+        <!-- Updated flags and order to match your provided image -->
+        <img onclick="changeLanguage('en')" src="../assets/img/america.png" />
+        <img onclick="changeLanguage('de')" src="../assets/img/german.png" />
+        <img onclick="changeLanguage('it')" src="../assets/img/italy.png" />
+        <img onclick="changeLanguage('fr')" src="../assets/img/france.png" />
+        <img onclick="changeLanguage('ja')" src="../assets/img/japan.png" />
+        <img onclick="changeLanguage('sv')" src="../assets/img/sweden.png" />
+        <img onclick="changeLanguage('es')" src="../assets/img/spain.png" />
+        <img onclick="changeLanguage('nl')" src="../assets/img/netherlands.png" />
+    </div>
+
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar">
-                <a href="mailto:contac@unitedpunch.com">Email: contact@unitedpunch.com</a>
-                <div>Contact: +123-456-7890</div>
+                <!-- data-i18n for text -->
+                <a href="mailto:contact@unitedpunch.com" data-i18n="topBarEmail"></a>
+                <div data-i18n="topBarContact"></div>
             </div>
         </div>
     </div>
 
-
-    <!-- Navbar -->
+    <!-- Nav bar -->
     <nav class="navbar">
         <div class="container">
             <div class="navbar-links-left">
-                <a href="./index.html">Home</a>
-                <a href="./pages/about.html">About Us</a>
-                <a href="./pages/blogs.html">Blogs</a>
+                <a href="./index.html" data-i18n="navHome"></a>
+                <a href="./pages/about.html" data-i18n="navAbout"></a>
+                <a href="./pages/blogs.html" data-i18n="navBlogs"></a>
             </div>
             <div class="navbar-logo">
-                <a href="../index.html">UNITED<img src="./assets/img/logo.png" alt="">PUNCH</a>
+                <a href="../index.html">
+                    UNITED
+                    <img src="./assets/img/logo.png" alt="" />
+                    PUNCH
+                </a>
                 <a class="theme-toggle" id="themeToggle">🌙</a>
             </div>
             <div class="navbar-links-right">
-                <a href="./pages/vectors.html">Vectors</a>
-                <a href="./pages/patches.html">Patches</a>
-                <a href="./pages/embroidery.html">Embroidery</a>
+                <a href="./pages/vectors.html" data-i18n="navVectors"></a>
+                <a href="./pages/patches.html" data-i18n="navPatches"></a>
+                <a href="./pages/embroidery.html" data-i18n="navEmbroidery"></a>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="../index.html" onclick="toggleMenu()">Home</a>
-            <a href="./pages/about.html" onclick="toggleMenu()">About Us</a>
-            <a href="./pages/blogs.html" onclick="toggleMenu()">Blogs</a>
-            <a href="./pages/vectors.html" onclick="toggleMenu()">Vectors</a>
-            <a href="./pages/patches.html" onclick="toggleMenu()">Patches</a>
-            <a href="./pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
+            <a href="../index.html" onclick="toggleMenu()" data-i18n="navHome"></a>
+            <a href="./pages/about.html" onclick="toggleMenu()" data-i18n="navAbout"></a>
+            <a href="./pages/blogs.html" onclick="toggleMenu()" data-i18n="navBlogs"></a>
+            <a href="./pages/vectors.html" onclick="toggleMenu()" data-i18n="navVectors"></a>
+            <a href="./pages/patches.html" onclick="toggleMenu()" data-i18n="navPatches"></a>
+            <a href="./pages/embroidery.html" onclick="toggleMenu()" data-i18n="navEmbroidery"></a>
         </div>
-
     </nav>
-
-    <!-- 🔵 Theme Toggle Button -->
 
     <!-- Banner Section -->
     <section class="banner">
         <div class="container banner-container">
             <div class="banner-text">
-                <h1>Raster to Vector Art Conversion</h1>
-                <p>We convert your images into high-quality vector art. Our team of 150+ vector artists ensures the best
-                    quality files, including AI, PSD, CorelDraw, and more.</p>
-                <button class="banner-button">Learn More</button>
+                <h1 data-i18n="bannerHeading"></h1>
+                <p data-i18n="bannerParagraph"></p>
+                <button class="banner-button" data-i18n="bannerButton"></button>
             </div>
             <div class="banner-image">
-                <img src="https://i.pinimg.com/236x/f5/dc/36/f5dc36aa5cde76fbd759cb507bdfc5a4.jpg" alt="Banner Image">
+                <img src="https://i.pinimg.com/236x/f5/dc/36/f5dc36aa5cde76fbd759cb507bdfc5a4.jpg" alt="Banner Image" />
             </div>
         </div>
     </section>
 
     <!-- Digitizing Section -->
     <section class="digitizing-section">
-        <h2>Best Digitizing Company in USA</h2>
-        <p>
-            Welcome to United Punch, one of the most valued digitizing company worldwide.
-            United Punch is the fore-most eera for top-selected position for the digitizing & Vector services. Our
-            experienced persons are passionated to build your most with innovation precisely. We ensures your creativity
-            will be merged with our commited work for your exceptional craftsmanship. With passion and innovation, along
-            with precision and a bundle of experience. We make sure to transform your minimum concepts and ideas into an
-            attractive and minimalist digital design. Your Desire is Our first priority.
-        </p>
+        <h2 data-i18n="digitizingHeading"></h2>
+        <p data-i18n="digitizingParagraph"></p>
         <div class="digitizing-features">
             <div class="feature-box">
                 <i class="fas fa-bolt"></i>
-                <h3>Lightning Fast Delivery</h3>
-                <p class="main_paragraph">Hamari expert team aapke designs ko sirf 3 se 4 ghanto mein digitize kar sakti
-                    hai, taake aap kaam ko
-                    tez aur behtareen tareeke se complete kar sakein.</p>
+                <h3 data-i18n="feature1Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature1Paragraph"></p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-star"></i>
-                <h3>High-Quality Precision</h3>
-                <p class="main_paragraph">Har chhoti si chhoti detail ka khayal rakhte hue, hum aapke designs ko bilkul
-                    perfect aur
-                    pixel-perfect format mein convert karte hain.</p>
+                <h3 data-i18n="feature2Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature2Paragraph"></p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-users"></i>
-                <h3>Skilled & Experienced Team</h3>
-                <p class="main_paragraph">Hamare professional digitizers aur vector artists har project ko industry
-                    standards ke mutabiq
-                    complete karne ka experience rakhte hain.</p>
+                <h3 data-i18n="feature3Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature3Paragraph"></p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-thumbs-up"></i>
-                <h3>Customer Satisfaction</h3>
-                <p class="main_paragraph">Hamari pehli priority aapki khushi hai! Hum har kaam ko perfection aur
-                    dedication ke sath deliver
-                    karte hain.</p>
+                <h3 data-i18n="feature4Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature4Paragraph"></p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-globe"></i>
-                <h3>Global Reach</h3>
-                <p class="main_paragraph">Chaahe aap kisi bhi country se hoon, humari services har jagah available hain.
-                    Aap kahin bhi hoon,
-                    hum aapke liye yahan hain!</p>
+                <h3 data-i18n="feature5Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature5Paragraph"></p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-crown"></i>
-                <h3>Why Choose Us?</h3>
-                <p class="main_paragraph">Hum sirf service nahi dete, balki ek behtareen experience provide karte hain
-                    jisme fast delivery,
-                    best quality aur 24/7 support shamil hai.</p>
+                <h3 data-i18n="feature6Heading"></h3>
+                <p class="main_paragraph" data-i18n="feature6Paragraph"></p>
             </div>
         </div>
-
     </section>
 
+    <!-- Featured Works Section -->
     <section class="featured-works">
         <div class="container">
-            <h2>Our Featured Works</h2>
+            <h2 data-i18n="featuredWorksHeading"></h2>
             <div class="gallery">
                 <!-- Gallery Images -->
                 <div class="gallery-item" onclick="openModal(0)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 1">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 1" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(1)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 2">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 2" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(2)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 3">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 3" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(3)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 4">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 4" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(4)">
-                    <img src="https://www.qualitypunch.com/assets/images/big5.png" alt="Work 5">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.qualitypunch.com/assets/images/big5.png" alt="Work 5" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(5)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 6">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 6" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(6)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 7">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 7" />
+                    <div class="hover-icon"></div>
                 </div>
                 <div class="gallery-item" onclick="openModal(7)">
-                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 8">
-                    <div class="hover-icon">
-                    </div>
+                    <img src="https://www.sedigitizing.com/images/gallery/digitizing/d20.jpg" alt="Work 8" />
+                    <div class="hover-icon"></div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Modal -->
     <div id="imageModal" class="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
-            <img id="modalImage" src="" alt="Featured Work">
-            <button class="prev-btn" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="close-btn" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="Featured Work" />
+            <button class="prev-btn" onclick="changeImage(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn" onclick="changeImage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
 
     <!-- Newsletter Section -->
     <section id="newsletter" class="newsletter-section">
         <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest offers and news. Sign up for our newsletter!</p>
+            <h2 data-i18n="newsletterHeading"></h2>
+            <p data-i18n="newsletterParagraph"></p>
             <form id="newsletterForm" class="newsletter-form">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <button type="submit" class="newsletter-button">Subscribe</button>
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                <button type="submit" class="newsletter-button" data-i18n="newsletterButton"></button>
             </form>
         </div>
     </section>
@@ -209,36 +203,34 @@
     <!-- Vector Art Service Component -->
     <section class="vector-art-service">
         <div class="container">
-            <h2 class="heading">Vector Art Service</h2>
+            <h2 class="heading" data-i18n="vectorArtServiceHeading"></h2>
             <img class="vector-image"
                 src="https://www.nkemb.com/wp-content/uploads/2024/05/Banner-02vector-1500x844.jpg"
-                alt="Vector Art Illustration">
+                alt="Vector Art Illustration" />
         </div>
         <footer class="footer">
             <div class="footer-container">
                 <!-- Logo and Working Hours -->
                 <div class="footer-section">
-                    <img src="./assets/img/logo.png" alt="United Punch Logo" class="footer-logo">
-                    <p>Hours: Monday-Friday<br> 24 / 7 Working.</p>
+                    <img src="./assets/img/logo.png" alt="United Punch Logo" class="footer-logo" />
+                    <p data-i18n="footerHours"></p>
                     <div class="social-icons">
                         <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
                         <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-
                 <!-- Resources Links -->
                 <div class="footer-section">
-                    <h3>Resources</h3>
+                    <h3 data-i18n="footerResources"></h3>
                     <ul>
                         <li><a href="#">Our Blog</a></li>
                         <li><a href="#">Free Design Library</a></li>
                     </ul>
                 </div>
-
                 <!-- About Links -->
                 <div class="footer-section">
-                    <h3>About</h3>
+                    <h3 data-i18n="footerAbout"></h3>
                     <ul>
                         <li><a href="#">Embroidery Digitizing Services</a></li>
                         <li><a href="#">Patches</a></li>
@@ -248,50 +240,412 @@
                         <li><a href="#">Our Professionals</a></li>
                     </ul>
                 </div>
-
                 <!-- Contact Info -->
                 <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Text: <a href="tel:8774425675">(877) 442-5675</a></p>
-                    <p>Email: <a href="mailto:design@unitedpunch.com">design@unitedpunch.com</a></p>
-                    <p>For international calls: <br><a href="tel:6195911084">619-591-1084</a></p>
+                    <h3 data-i18n="footerContact"></h3>
+                    <p>
+                        Text: <a href="tel:8774425675">(877) 442-5675</a>
+                    </p>
+                    <p>
+                        Email:
+                        <a href="mailto:design@unitedpunch.com">design@unitedpunch.com</a>
+                    </p>
+                    <p>
+                        For international calls:
+                        <br /><a href="tel:6195911084">619-591-1084</a>
+                    </p>
                     <h4>Contact Sales & Support:</h4>
                     <p><a href="tel:8774425675">(877) 442-5675</a></p>
                     <p><a href="#newsletter">Get Quote</a></p>
                 </div>
             </div>
-
             <!-- Endnote -->
             <div class="footer-endnote">
-                <p> Terms and Conditions | Privacy Policy | &copy; 2025 United Punch All Rights Reserved.</p>
+                <p data-i18n="footerEndnote"></p>
             </div>
         </footer>
-
     </section>
 
+    <!-- Your custom JS -->
     <script src="./scripts/index.js"></script>
     <script>
+        // Toggle Mobile Menu
         function toggleMenu() {
             let menu = document.getElementById("mobileMenu");
             menu.style.display = menu.style.display === "flex" ? "none" : "flex";
         }
 
-        // ✅ Theme Toggle Functionality
+        // Theme Toggle
         const themeToggle = document.getElementById("themeToggle");
-        const html = document.documentElement; // Select <html> for setting data-theme
-
-        // Check for saved theme in localStorage
+        const html = document.documentElement;
         const savedTheme = localStorage.getItem("theme") || "light";
         html.setAttribute("data-theme", savedTheme);
 
-        // Toggle Theme on Button Click
         themeToggle.addEventListener("click", function () {
             let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-            // Apply New Theme
             html.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme); // Save preference
+            localStorage.setItem("theme", newTheme);
         });
+    </script>
+
+    <!-- i18next Integration Script -->
+    <script>
+        // 1. Define your translation resources for 8 languages
+        const resources = {
+            en: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "About Us",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectors",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Embroidery",
+                    "bannerHeading": "Raster to Vector Art Conversion",
+                    "bannerParagraph": "We convert your images into high-quality vector art. Our team of 150+ vector artists ensures the best quality files, including AI, PSD, CorelDraw, and more.",
+                    "bannerButton": "Learn More",
+                    "digitizingHeading": "Best Digitizing Company in USA",
+                    "digitizingParagraph": "Welcome to United Punch, one of the most valued digitizing companies worldwide. We merge innovation with precision to transform your ideas into exceptional digital designs.",
+                    "feature1Heading": "Lightning Fast Delivery",
+                    "feature1Paragraph": "Our expert team digitizes your designs in just 3 to 4 hours, ensuring quick and high-quality completion.",
+                    "feature2Heading": "High-Quality Precision",
+                    "feature2Paragraph": "We pay attention to every detail, converting your designs into a perfect, pixel-perfect format.",
+                    "feature3Heading": "Skilled & Experienced Team",
+                    "feature3Paragraph": "Our professional digitizers and vector artists have the experience to complete every project to industry standards.",
+                    "feature4Heading": "Customer Satisfaction",
+                    "feature4Paragraph": "Your happiness is our top priority! We deliver every project with perfection and dedication.",
+                    "feature5Heading": "Global Reach",
+                    "feature5Paragraph": "No matter where you are, our services are available globally. We are here for you anywhere!",
+                    "feature6Heading": "Why Choose Us?",
+                    "feature6Paragraph": "We don't just offer services; we provide an exceptional experience with fast delivery, best quality, and 24/7 support.",
+                    "featuredWorksHeading": "Our Featured Works",
+                    "newsletterHeading": "Subscribe to Our Newsletter",
+                    "newsletterParagraph": "Stay updated with our latest offers and news. Sign up for our newsletter!",
+                    "newsletterButton": "Subscribe",
+                    "vectorArtServiceHeading": "Vector Art Service",
+                    "footerHours": "Hours: Monday-Friday<br>24/7 Working.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+
+            // 2. Spanish (es)
+            es: {
+                translation: {
+                    "topBarEmail": "Correo: contact@unitedpunch.com",
+                    "topBarContact": "Contacto: +123-456-7890",
+                    "navHome": "Inicio",
+                    "navAbout": "Sobre Nosotros",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectores",
+                    "navPatches": "Parches",
+                    "navEmbroidery": "Bordado",
+                    "bannerHeading": "Conversión de Raster a Arte Vectorial",
+                    "bannerParagraph": "Convertimos tus imágenes en arte vectorial de alta calidad. Nuestro equipo de más de 150 artistas vectoriales garantiza los mejores archivos, incluyendo AI, PSD, CorelDraw, y más.",
+                    "bannerButton": "Aprender Más",
+                    "digitizingHeading": "Mejor Empresa de Digitalización en EE. UU.",
+                    "digitizingParagraph": "Bienvenido a United Punch, una de las empresas de digitalización más valoradas en todo el mundo. Fusionamos la innovación con la precisión para transformar tus ideas en diseños digitales excepcionales.",
+                    "feature1Heading": "Entrega Rápida",
+                    "feature1Paragraph": "Nuestro equipo experto digitaliza tus diseños en solo 3 a 4 horas, asegurando una finalización rápida y de alta calidad.",
+                    "feature2Heading": "Precisión de Alta Calidad",
+                    "feature2Paragraph": "Prestamos atención a cada detalle, convirtiendo tus diseños en un formato perfecto y pixel-perfect.",
+                    "feature3Heading": "Equipo Calificado y Experimentado",
+                    "feature3Paragraph": "Nuestros digitalizadores y artistas vectoriales profesionales tienen la experiencia para completar cada proyecto según los estándares de la industria.",
+                    "feature4Heading": "Satisfacción del Cliente",
+                    "feature4Paragraph": "¡Tu felicidad es nuestra principal prioridad! Entregamos cada proyecto con perfección y dedicación.",
+                    "feature5Heading": "Alcance Global",
+                    "feature5Paragraph": "No importa dónde estés, nuestros servicios están disponibles a nivel mundial. ¡Estamos aquí para ti en cualquier lugar!",
+                    "feature6Heading": "¿Por Qué Elegirnos?",
+                    "feature6Paragraph": "No solo ofrecemos servicios, brindamos una experiencia excepcional con entrega rápida, la mejor calidad y soporte 24/7.",
+                    "featuredWorksHeading": "Nuestros Trabajos Destacados",
+                    "newsletterHeading": "Suscríbete a Nuestro Boletín",
+                    "newsletterParagraph": "Mantente actualizado con nuestras últimas ofertas y noticias. ¡Regístrate para nuestro boletín!",
+                    "newsletterButton": "Suscribirse",
+                    "vectorArtServiceHeading": "Servicio de Arte Vectorial",
+                    "footerHours": "Horario: Lunes-Viernes<br>Trabajamos 24/7.",
+                    "footerResources": "Recursos",
+                    "footerAbout": "Acerca de",
+                    "footerContact": "Contáctanos",
+                    "footerEndnote": "Términos y Condiciones | Política de Privacidad | © 2025 United Punch Todos los Derechos Reservados."
+                }
+            },
+
+            // 3. French (fr)
+            fr: {
+                translation: {
+                    "topBarEmail": "E-mail : contact@unitedpunch.com",
+                    "topBarContact": "Contact : +123-456-7890",
+                    "navHome": "Accueil",
+                    "navAbout": "À Propos",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vecteurs",
+                    "navPatches": "Patchs",
+                    "navEmbroidery": "Broderie",
+                    "bannerHeading": "Conversion Raster en Art Vectoriel",
+                    "bannerParagraph": "Nous transformons vos images en art vectoriel de haute qualité. Notre équipe de plus de 150 artistes vectoriels garantit les meilleurs fichiers, y compris AI, PSD, CorelDraw, et plus encore.",
+                    "bannerButton": "En savoir plus",
+                    "digitizingHeading": "Meilleure Entreprise de Numérisation aux États-Unis",
+                    "digitizingParagraph": "Bienvenue chez United Punch, l'une des entreprises de numérisation les plus estimées au monde. Nous allions innovation et précision pour transformer vos idées en designs numériques exceptionnels.",
+                    "feature1Heading": "Livraison Ultra-Rapide",
+                    "feature1Paragraph": "Notre équipe d'experts numérise vos designs en seulement 3 à 4 heures, garantissant une exécution rapide et de haute qualité.",
+                    "feature2Heading": "Précision de Haute Qualité",
+                    "feature2Paragraph": "Nous prêtons attention à chaque détail, convertissant vos designs en un format parfait et pixel-perfect.",
+                    "feature3Heading": "Équipe Compétente et Expérimentée",
+                    "feature3Paragraph": "Nos digitalizers et artistes vectoriels professionnels possèdent l'expérience nécessaire pour réaliser chaque projet selon les normes de l'industrie.",
+                    "feature4Heading": "Satisfaction Client",
+                    "feature4Paragraph": "Votre satisfaction est notre priorité absolue ! Nous livrons chaque projet avec perfection et dévouement.",
+                    "feature5Heading": "Portée Globale",
+                    "feature5Paragraph": "Peu importe où vous êtes, nos services sont disponibles dans le monde entier. Nous sommes là pour vous, partout !",
+                    "feature6Heading": "Pourquoi Nous Choisir ?",
+                    "feature6Paragraph": "Nous ne fournissons pas seulement des services, nous offrons une expérience exceptionnelle avec une livraison ultra-rapide, la meilleure qualité et un support 24/7.",
+                    "featuredWorksHeading": "Nos Réalisations",
+                    "newsletterHeading": "Abonnez-vous à Notre Newsletter",
+                    "newsletterParagraph": "Restez informé de nos dernières offres et actualités. Inscrivez-vous à notre newsletter !",
+                    "newsletterButton": "S'abonner",
+                    "vectorArtServiceHeading": "Service d'Art Vectoriel",
+                    "footerHours": "Horaires : Lundi-Vendredi<br>Travail 24/7.",
+                    "footerResources": "Ressources",
+                    "footerAbout": "À Propos",
+                    "footerContact": "Contactez-nous",
+                    "footerEndnote": "Conditions d'utilisation | Politique de Confidentialité | © 2025 United Punch Tous Droits Réservés."
+                }
+            },
+
+            // 4. German (de)
+            de: {
+                translation: {
+                    "topBarEmail": "E-Mail: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Startseite",
+                    "navAbout": "Über Uns",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vektoren",
+                    "navPatches": "Aufnäher",
+                    "navEmbroidery": "Stickerei",
+                    "bannerHeading": "Konvertierung von Raster zu Vektor",
+                    "bannerParagraph": "Wir wandeln Ihre Bilder in hochwertige Vektorgrafiken um. Unser Team von über 150 Vektorkünstlern sorgt für erstklassige Dateien, einschließlich AI, PSD, CorelDraw und mehr.",
+                    "bannerButton": "Mehr Erfahren",
+                    "digitizingHeading": "Beste Digitalisierungsfirma in den USA",
+                    "digitizingParagraph": "Willkommen bei United Punch, einer der angesehensten Digitalisierungsfirmen weltweit. Wir verbinden Innovation mit Präzision, um Ihre Ideen in außergewöhnliche digitale Designs umzusetzen.",
+                    "feature1Heading": "Blitzschnelle Lieferung",
+                    "feature1Paragraph": "Unser Expertenteam digitalisiert Ihre Designs in nur 3 bis 4 Stunden und gewährleistet eine schnelle und qualitativ hochwertige Fertigstellung.",
+                    "feature2Heading": "Hochpräzise Qualität",
+                    "feature2Paragraph": "Wir achten auf jedes Detail und konvertieren Ihre Designs in ein perfektes, pixelgenaues Format.",
+                    "feature3Heading": "Qualifiziertes & Erfahrenes Team",
+                    "feature3Paragraph": "Unsere professionellen Digitalisierer und Vektorkünstler haben die Erfahrung, jedes Projekt nach Industriestandards abzuschließen.",
+                    "feature4Heading": "Kundenzufriedenheit",
+                    "feature4Paragraph": "Ihre Zufriedenheit hat für uns oberste Priorität! Wir liefern jedes Projekt mit Perfektion und Engagement.",
+                    "feature5Heading": "Weltweite Reichweite",
+                    "feature5Paragraph": "Egal wo Sie sich befinden, unsere Dienste sind weltweit verfügbar. Wir sind überall für Sie da!",
+                    "feature6Heading": "Warum Uns Wählen?",
+                    "feature6Paragraph": "Wir bieten nicht nur Dienstleistungen an, sondern auch ein herausragendes Erlebnis mit schneller Lieferung, bester Qualität und 24/7 Support.",
+                    "featuredWorksHeading": "Unsere Ausgewählten Arbeiten",
+                    "newsletterHeading": "Abonnieren Sie Unseren Newsletter",
+                    "newsletterParagraph": "Bleiben Sie über unsere neuesten Angebote und Neuigkeiten informiert. Melden Sie sich für unseren Newsletter an!",
+                    "newsletterButton": "Abonnieren",
+                    "vectorArtServiceHeading": "Vektor-Kunstdienst",
+                    "footerHours": "Öffnungszeiten: Montag-Freitag<br>24/7 Betrieb.",
+                    "footerResources": "Ressourcen",
+                    "footerAbout": "Über",
+                    "footerContact": "Kontakt",
+                    "footerEndnote": "Allgemeine Geschäftsbedingungen | Datenschutz | © 2025 United Punch Alle Rechte vorbehalten."
+                }
+            },
+
+            // 5. Italian (it)
+            it: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contatto: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Chi Siamo",
+                    "navBlogs": "Blog",
+                    "navVectors": "Vettori",
+                    "navPatches": "Patch",
+                    "navEmbroidery": "Ricamo",
+                    "bannerHeading": "Conversione da Raster a Arte Vettoriale",
+                    "bannerParagraph": "Convertiamo le tue immagini in arte vettoriale di alta qualità. Il nostro team di oltre 150 artisti vettoriali garantisce file di alta qualità, tra cui AI, PSD, CorelDraw e altro.",
+                    "bannerButton": "Scopri di Più",
+                    "digitizingHeading": "Migliore Azienda di Digitalizzazione negli USA",
+                    "digitizingParagraph": "Benvenuto in United Punch, una delle aziende di digitalizzazione più apprezzate al mondo. Uniamo innovazione e precisione per trasformare le tue idee in design digitali eccezionali.",
+                    "feature1Heading": "Consegna Rapida",
+                    "feature1Paragraph": "Il nostro team di esperti digitalizza i tuoi design in sole 3-4 ore, garantendo tempi di consegna rapidi e alta qualità.",
+                    "feature2Heading": "Precisione di Alta Qualità",
+                    "feature2Paragraph": "Prestiamo attenzione a ogni dettaglio, convertendo i tuoi design in un formato perfetto e pixel-perfect.",
+                    "feature3Heading": "Team Qualificato ed Esperto",
+                    "feature3Paragraph": "I nostri digitalizzatori e artisti vettoriali professionisti hanno l’esperienza per completare ogni progetto secondo gli standard del settore.",
+                    "feature4Heading": "Soddisfazione del Cliente",
+                    "feature4Paragraph": "La tua soddisfazione è la nostra massima priorità! Consegniamo ogni progetto con perfezione e dedizione.",
+                    "feature5Heading": "Copertura Globale",
+                    "feature5Paragraph": "Ovunque tu sia, i nostri servizi sono disponibili in tutto il mondo. Siamo qui per te, ovunque!",
+                    "feature6Heading": "Perché Scegliere Noi?",
+                    "feature6Paragraph": "Non offriamo solo servizi, ma un'esperienza eccezionale con consegna rapida, massima qualità e supporto 24/7.",
+                    "featuredWorksHeading": "I Nostri Lavori in Evidenza",
+                    "newsletterHeading": "Iscriviti alla Nostra Newsletter",
+                    "newsletterParagraph": "Resta aggiornato sulle nostre ultime offerte e novità. Iscriviti alla nostra newsletter!",
+                    "newsletterButton": "Iscriviti",
+                    "vectorArtServiceHeading": "Servizio di Arte Vettoriale",
+                    "footerHours": "Orari: Lunedì-Venerdì<br>Disponibili 24/7.",
+                    "footerResources": "Risorse",
+                    "footerAbout": "Chi Siamo",
+                    "footerContact": "Contattaci",
+                    "footerEndnote": "Termini e Condizioni | Informativa sulla Privacy | © 2025 United Punch Tutti i Diritti Riservati."
+                }
+            },
+
+            // 6. Japanese (ja)
+            ja: {
+                translation: {
+                    "topBarEmail": "メール: contact@unitedpunch.com",
+                    "topBarContact": "連絡先: +123-456-7890",
+                    "navHome": "ホーム",
+                    "navAbout": "会社概要",
+                    "navBlogs": "ブログ",
+                    "navVectors": "ベクター",
+                    "navPatches": "パッチ",
+                    "navEmbroidery": "刺繍",
+                    "bannerHeading": "ラスタからベクターアートへの変換",
+                    "bannerParagraph": "私たちは画像を高品質のベクターアートに変換します。150人以上のベクターアーティストが、AI、PSD、CorelDrawなど最高品質のファイルを提供します。",
+                    "bannerButton": "詳しく見る",
+                    "digitizingHeading": "アメリカで最高のデジタイズ会社",
+                    "digitizingParagraph": "United Punchへようこそ。世界でも高く評価されるデジタイズ会社の一つです。私たちはイノベーションと正確さを融合し、あなたのアイデアを卓越したデジタルデザインに変換します。",
+                    "feature1Heading": "超高速納品",
+                    "feature1Paragraph": "私たちの専門チームは、わずか3～4時間でデザインをデジタイズし、迅速かつ高品質な仕上がりを保証します。",
+                    "feature2Heading": "高精度クオリティ",
+                    "feature2Paragraph": "あらゆるディテールに注意を払い、完璧でピクセル単位の正確さを持つフォーマットに変換します。",
+                    "feature3Heading": "熟練かつ経験豊富なチーム",
+                    "feature3Paragraph": "プロのデジタイザーとベクターアーティストが、業界基準に沿ったプロジェクト完遂の経験を備えています。",
+                    "feature4Heading": "顧客満足",
+                    "feature4Paragraph": "お客様の満足が最優先！私たちはすべてのプロジェクトを完璧と献身をもってお届けします。",
+                    "feature5Heading": "グローバル対応",
+                    "feature5Paragraph": "どこにいても、私たちのサービスは世界中で利用可能です。どこからでもお任せください！",
+                    "feature6Heading": "なぜ私たちを選ぶ？",
+                    "feature6Paragraph": "私たちは単なるサービス提供ではなく、高速納品、最高品質、24/7サポートを備えた特別な体験を提供します。",
+                    "featuredWorksHeading": "注目の作品",
+                    "newsletterHeading": "ニュースレターを購読する",
+                    "newsletterParagraph": "最新のオファーやニュースをお見逃しなく。ニュースレターにご登録ください！",
+                    "newsletterButton": "登録",
+                    "vectorArtServiceHeading": "ベクターアートサービス",
+                    "footerHours": "営業時間：月曜～金曜<br>24時間対応。",
+                    "footerResources": "リソース",
+                    "footerAbout": "会社概要",
+                    "footerContact": "お問い合わせ",
+                    "footerEndnote": "利用規約 | プライバシーポリシー | © 2025 United Punch 無断複写・転載を禁じます。"
+                }
+            },
+
+            // 7. Swedish (sv)
+            sv: {
+                translation: {
+                    "topBarEmail": "E-post: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Hem",
+                    "navAbout": "Om Oss",
+                    "navBlogs": "Bloggar",
+                    "navVectors": "Vektorer",
+                    "navPatches": "Märken",
+                    "navEmbroidery": "Broderi",
+                    "bannerHeading": "Konvertering från Raster till Vektor",
+                    "bannerParagraph": "Vi konverterar dina bilder till högkvalitativ vektorkonst. Vårt team på 150+ vektorkonstnärer säkerställer filer av bästa kvalitet, inklusive AI, PSD, CorelDraw och mer.",
+                    "bannerButton": "Läs Mer",
+                    "digitizingHeading": "Bästa Digitaliseringsföretaget i USA",
+                    "digitizingParagraph": "Välkommen till United Punch, ett av de mest uppskattade digitaliseringsföretagen i världen. Vi kombinerar innovation med precision för att förvandla dina idéer till exceptionella digitala designer.",
+                    "feature1Heading": "Snabb Leverans",
+                    "feature1Paragraph": "Vårt expertteam digitaliserar dina designer på bara 3–4 timmar och garanterar snabb och högkvalitativ leverans.",
+                    "feature2Heading": "Högkvalitativ Precision",
+                    "feature2Paragraph": "Vi uppmärksammar varje detalj och konverterar dina designer till ett perfekt, pixelnoggrant format.",
+                    "feature3Heading": "Skickligt & Erfaret Team",
+                    "feature3Paragraph": "Våra professionella digitaliserare och vektorkonstnärer har erfarenhet av att slutföra varje projekt enligt branschstandarder.",
+                    "feature4Heading": "Kundnöjdhet",
+                    "feature4Paragraph": "Din tillfredsställelse är vår högsta prioritet! Vi levererar varje projekt med perfektion och engagemang.",
+                    "feature5Heading": "Global Räckvidd",
+                    "feature5Paragraph": "Var du än befinner dig finns våra tjänster tillgängliga världen över. Vi är här för dig överallt!",
+                    "feature6Heading": "Varför Välja Oss?",
+                    "feature6Paragraph": "Vi erbjuder inte bara tjänster, utan en enastående upplevelse med snabb leverans, bästa kvalitet och support dygnet runt.",
+                    "featuredWorksHeading": "Våra Utvalda Arbeten",
+                    "newsletterHeading": "Prenumerera på Vårt Nyhetsbrev",
+                    "newsletterParagraph": "Håll dig uppdaterad med våra senaste erbjudanden och nyheter. Registrera dig för vårt nyhetsbrev!",
+                    "newsletterButton": "Prenumerera",
+                    "vectorArtServiceHeading": "Vektorkonsttjänst",
+                    "footerHours": "Öppettider: Måndag-Fredag<br>Tillgängliga dygnet runt.",
+                    "footerResources": "Resurser",
+                    "footerAbout": "Om",
+                    "footerContact": "Kontakta Oss",
+                    "footerEndnote": "Villkor & Integritetspolicy | © 2025 United Punch Alla Rättigheter Förbehållna."
+                }
+            },
+
+            // 8. Dutch (nl)
+            nl: {
+                translation: {
+                    "topBarEmail": "E-mail: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Over Ons",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectoren",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Borduurwerk",
+                    "bannerHeading": "Conversie van Raster naar Vector Art",
+                    "bannerParagraph": "Wij zetten uw afbeeldingen om in hoogwaardige vector-art. Ons team van meer dan 150 vectorartiesten zorgt voor bestanden van de beste kwaliteit, waaronder AI, PSD, CorelDraw en meer.",
+                    "bannerButton": "Meer Informatie",
+                    "digitizingHeading": "Beste Digitaliseringsbedrijf in de VS",
+                    "digitizingParagraph": "Welkom bij United Punch, een van de meest gewaardeerde digitaliseringsbedrijven ter wereld. We combineren innovatie met precisie om uw ideeën om te zetten in uitzonderlijke digitale ontwerpen.",
+                    "feature1Heading": "Razendsnelle Levering",
+                    "feature1Paragraph": "Ons ervaren team digitaliseert uw ontwerpen in slechts 3 tot 4 uur, met snelle en hoogwaardige resultaten.",
+                    "feature2Heading": "Hoogwaardige Precisie",
+                    "feature2Paragraph": "We letten op elk detail en zetten uw ontwerpen om in een perfect, pixel-nauwkeurig formaat.",
+                    "feature3Heading": "Vakkundig & Ervaren Team",
+                    "feature3Paragraph": "Onze professionele digitaliseerders en vectorartiesten hebben de ervaring om elk project volgens industriestandaarden te voltooien.",
+                    "feature4Heading": "Klanttevredenheid",
+                    "feature4Paragraph": "Uw tevredenheid is onze hoogste prioriteit! We leveren elk project met perfectie en toewijding.",
+                    "feature5Heading": "Wereldwijde Bereikbaarheid",
+                    "feature5Paragraph": "Waar u zich ook bevindt, onze diensten zijn wereldwijd beschikbaar. We staan overal voor u klaar!",
+                    "feature6Heading": "Waarom Voor Ons Kiezen?",
+                    "feature6Paragraph": "We bieden niet alleen diensten, maar een uitzonderlijke ervaring met snelle levering, de beste kwaliteit en 24/7 ondersteuning.",
+                    "featuredWorksHeading": "Onze Uitgelichte Werken",
+                    "newsletterHeading": "Meld U Aan voor Onze Nieuwsbrief",
+                    "newsletterParagraph": "Blijf op de hoogte van onze nieuwste aanbiedingen en nieuws. Schrijf u in voor onze nieuwsbrief!",
+                    "newsletterButton": "Inschrijven",
+                    "vectorArtServiceHeading": "Vector Art Service",
+                    "footerHours": "Openingstijden: Maandag-Vrijdag<br>24/7 Beschikbaar.",
+                    "footerResources": "Bronnen",
+                    "footerAbout": "Over",
+                    "footerContact": "Contact",
+                    "footerEndnote": "Algemene Voorwaarden | Privacybeleid | © 2025 United Punch Alle Rechten Voorbehouden."
+                }
+            }
+        };
+
+        // 3. Initialize i18next with default language (English)
+        i18next.init(
+            {
+                lng: "en", // Default language
+                debug: false,
+                resources: resources,
+            },
+            function (err, t) {
+                updateContent();
+            }
+        );
+
+        // 4. Change language function
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, function (err, t) {
+                updateContent();
+            });
+        }
+
+        // 5. Update text for elements with data-i18n
+        function updateContent() {
+            document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                const key = element.getAttribute("data-i18n");
+                element.innerHTML = i18next.t(key);
+            });
+        }
     </script>
 </body>
 

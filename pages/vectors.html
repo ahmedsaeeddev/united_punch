@@ -2,22 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/blogs.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/blogs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- i18next from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 </head>
 
 <body>
+    <!-- Language Switcher with 8 flags -->
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+        <!-- Updated flags and order to match your provided image -->
+        <img onclick="changeLanguage('en')" src="../assets/img/america.png" />
+        <img onclick="changeLanguage('de')" src="../assets/img/german.png" />
+        <img onclick="changeLanguage('it')" src="../assets/img/italy.png" />
+        <img onclick="changeLanguage('fr')" src="../assets/img/france.png" />
+        <img onclick="changeLanguage('ja')" src="../assets/img/japan.png" />
+        <img onclick="changeLanguage('sv')" src="../assets/img/sweden.png" />
+        <img onclick="changeLanguage('es')" src="../assets/img/spain.png" />
+        <img onclick="changeLanguage('nl')" src="../assets/img/netherlands.png" />
+    </div>
+
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar">
-                <div>Email: contact@unitedpunch.com</div>
-                <div>Contact: +123-456-7890</div>
+                <div data-i18n="topBarEmail">Email: contact@unitedpunch.com</div>
+                <div data-i18n="topBarContact">Contact: +123-456-7890</div>
             </div>
         </div>
     </div>
@@ -26,81 +45,72 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-links-left">
-                <a href="./index.html">Home</a>
-                <a href="../pages/about.html">About Us</a>
-                <a href="../pages/blogs.html">Blogs</a>
+                <a href="../index.html" data-i18n="navHome">Home</a>
+                <a href="../pages/about.html" data-i18n="navAbout">About Us</a>
+                <a href="../pages/blogs.html" data-i18n="navBlogs">Blogs</a>
             </div>
             <div class="navbar-logo">
-                <a href="../index.html">UNITED<img src="./assets/img/logo.png" alt="">PUNCH</a>
+                <a href="../index.html">
+                    UNITED
+                    <img src="../assets/img/logo.png" alt="Logo" />
+                    PUNCH
+                </a>
                 <a class="theme-toggle" id="themeToggle">🌙</a>
             </div>
             <div class="navbar-links-right">
-                <a href="../pages/vectors.html">Vectors</a>
-                <a href="../pages/patches.html">Patches</a>
-                <a href="../pages/embroidery.html">Embroidery</a>
+                <a href="../pages/vectors.html" data-i18n="navVectors">Vectors</a>
+                <a href="../pages/patches.html" data-i18n="navPatches">Patches</a>
+                <a href="../pages/embroidery.html" data-i18n="navEmbroidery">Embroidery</a>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="../index.html" onclick="toggleMenu()">Home</a>
-            <a href="../pages/about.html" onclick="toggleMenu()">About Us</a>
-            <a href="../pages/blogs.html" onclick="toggleMenu()">Blogs</a>
-            <a href="../pages/vectors.html" onclick="toggleMenu()">Vectors</a>
-            <a href="../pages/patches.html" onclick="toggleMenu()">Patches</a>
-            <a href="../pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
+            <a href="../index.html" onclick="toggleMenu()" data-i18n="navHome">Home</a>
+            <a href="../pages/about.html" onclick="toggleMenu()" data-i18n="navAbout">About Us</a>
+            <a href="../pages/blogs.html" onclick="toggleMenu()" data-i18n="navBlogs">Blogs</a>
+            <a href="../pages/vectors.html" onclick="toggleMenu()" data-i18n="navVectors">Vectors</a>
+            <a href="../pages/patches.html" onclick="toggleMenu()" data-i18n="navPatches">Patches</a>
+            <a href="../pages/embroidery.html" onclick="toggleMenu()" data-i18n="navEmbroidery">Embroidery</a>
         </div>
-
     </nav>
+
     <!-- Blogs Section -->
     <section class="blogs-section">
         <!-- Blog 1 -->
         <div class="blog">
             <div class="blog-content">
-                <h2>Mastering Vector Conversion for Flawless Embroidery</h2>
-                <p class="main-paragraph">
+                <h2 data-i18n="blogHeading1">
+                    Mastering Vector Conversion for Flawless Embroidery
+                </h2>
+                <p class="main-paragraph" data-i18n="blogParagraph1">
                     <span class="main">Vector conversion</span> forms the backbone of premium embroidery digitizing
-                    services.
-                    Our team utilizes <span class="main">AI-powered tracing algorithms</span> combined with manual
-                    refinement to convert even low-resolution logos into production-ready embroidery files.
-                    This dual approach ensures we capture every detail while maintaining
-                    <span class="main">stitch economy</span> - crucial for reducing thread consumption without
-                    compromising visual impact.
+                    services...
                 </p>
-                <p class="main-paragraph">
-                    For intricate <span class="main">patch designs</span>, our digitizers employ
-                    <span class="main">layer-based sequencing</span> that mirrors commercial embroidery
-                    machine operations. This method allows us to predict and prevent
-                    <span class="main">thread tension issues</span> during production. Recent advancements
-                    in our <span class="main">color matching system</span> can now accurately replicate
-                    Pantone shades using composite thread blends, achieving 98.7% color accuracy
-                    across various lighting conditions.
+                <p class="main-paragraph" data-i18n="blogParagraph2">
+                    For intricate <span class="main">patch designs</span>, our digitizers employ...
                 </p>
-                <p class="main-paragraph">
-                    Our <span class="main">small text optimization</span> techniques enable crisp
-                    3mm lettering on patches - a industry breakthrough previously limited to 5mm.
-                    Through <span class="main">parametric underlay adjustments</span>, we've successfully
-                    digitized complex medical insignias with 0.2mm stitch precision, maintaining
-                    legibility even after 50+ industrial washes. Case studies show our vector
-                    conversion methods reduce embroidery machine downtime by 40% compared to
-                    traditional digitizing approaches.
+                <p class="main-paragraph" data-i18n="blogParagraph3">
+                    Our <span class="main">small text optimization</span> techniques enable crisp...
                 </p>
             </div>
             <div class="blog-image">
                 <img src="https://svgconverter.app/src/media/img/22/sketchToVector-min.png"
-                    alt="Vector Conversion Process">
+                    alt="Vector Conversion Process" />
             </div>
         </div>
-
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo and Working Hours -->
             <div class="footer-section">
-                <img src="../assets/img/logo.png" alt="United Punch Logo" class="footer-logo">
-                <p class="main-paragraph">Hours: Monday-Friday<br>6:00am-4:30pm PST.</p>
+                <img src="../assets/img/logo.png" alt="United Punch Logo" class="footer-logo" />
+                <p class="main-paragraph" data-i18n="footerHours">
+                    Hours: Monday-Friday<br />6:00am-4:30pm PST.
+                </p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -110,7 +120,7 @@
 
             <!-- Resources Links -->
             <div class="footer-section">
-                <h3>Resources</h3>
+                <h3 data-i18n="footerResources">Resources</h3>
                 <ul>
                     <li><a href="#">Our Blog</a></li>
                     <li><a href="#">Free Design Library</a></li>
@@ -119,7 +129,7 @@
 
             <!-- About Links -->
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footerAbout">About</h3>
                 <ul>
                     <li><a href="#">Embroidery Digitizing</a></li>
                     <li><a href="#">Vector Art</a></li>
@@ -131,13 +141,22 @@
 
             <!-- Contact Info -->
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p class="main-paragraph">Text: <a href="tel:8774425675">(877) 442-5675</a></p>
-                <p class="main-paragraph">Email: <a href="mailto:design@prodigitizing.com">design@prodigitizing.com</a>
+                <h3 data-i18n="footerContact">Contact Us</h3>
+                <p class="main-paragraph">
+                    Text: <a href="tel:8774425675">(877) 442-5675</a>
                 </p>
-                <p class="main-paragraph">For international calls: <br><a href="tel:6195911084">619-591-1084</a></p>
+                <p class="main-paragraph">
+                    Email:
+                    <a href="mailto:design@prodigitizing.com">design@prodigitizing.com</a>
+                </p>
+                <p class="main-paragraph">
+                    For international calls:
+                    <br /><a href="tel:6195911084">619-5911084</a>
+                </p>
                 <h4>Contact Sales & Support:</h4>
-                <p class="main-paragraph"><a href="tel:8774425675">(877) 442-5675</a></p>
+                <p class="main-paragraph">
+                    <a href="tel:8774425675">(877) 442-5675</a>
+                </p>
                 <p class="main-paragraph"><a href="#">Get Embroidery Quote</a></p>
                 <p class="main-paragraph"><a href="#">Get Vector Quote</a></p>
             </div>
@@ -145,46 +164,230 @@
 
         <!-- Endnote -->
         <div class="footer-endnote">
-            <p>Terms and Conditions | Privacy Policy | © 2024 PRO digitizing All Rights Reserved</p>
+            <p data-i18n="footerEndnote">
+                Terms and Conditions | Privacy Policy | © 2024 PRO digitizing All Rights Reserved
+            </p>
         </div>
     </footer>
 
-</body>
-<script>
-    function showToast(message) {
-        toast.textContent = message;
-        toast.style.display = "block";
-        setTimeout(() => {
-            toast.style.display = "none";
-        }, 2000);  // Toast disappears after 2 seconds
-    }
+    <!-- Scripts -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            let menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
 
-    function toggleMenu() {
-        const mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("active");
-    }
+        // Theme Toggle
+        const themeToggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem("theme") || "light";
+        html.setAttribute("data-theme", savedTheme);
 
-    function toggleMenu() {
-        let menu = document.getElementById("mobileMenu");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
+        themeToggle.addEventListener("click", function () {
+            let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            html.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
 
-    // ✅ Theme Toggle Functionality
-    const themeToggle = document.getElementById("themeToggle");
-    const html = document.documentElement; // Select <html> for setting data-theme
+    <!-- i18next Integration Script -->
+    <script>
+        // Translation resources for 8 languages
+        const resources = {
+            en: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "About Us",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectors",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Embroidery",
+                    "blogHeading1": "Mastering Vector Conversion for Flawless Embroidery",
+                    "blogParagraph1": "<span class='main'>Vector conversion</span> forms the backbone of premium embroidery digitizing services. Our team utilizes <span class='main'>AI-powered tracing algorithms</span> combined with manual refinement to convert even low-resolution logos into production-ready embroidery files. This dual approach ensures we capture every detail while maintaining <span class='main'>stitch economy</span>—crucial for reducing thread consumption without compromising visual impact.",
+                    "blogParagraph2": "For intricate <span class='main'>patch designs</span>, our digitizers employ <span class='main'>layer-based sequencing</span> that mirrors commercial embroidery machine operations. This method allows us to predict and prevent <span class='main'>thread tension issues</span> during production. Recent advancements in our <span class='main'>color matching system</span> can now accurately replicate Pantone shades using composite thread blends, achieving 98.7% color accuracy across various lighting conditions.",
+                    "blogParagraph3": "Our <span class='main'>small text optimization</span> techniques enable crisp 3mm lettering on patches—a breakthrough previously limited to 5mm. Through <span class='main'>parametric underlay adjustments</span>, we've successfully digitized complex medical insignias with 0.2mm stitch precision, maintaining legibility even after 50+ industrial washes. Case studies show our vector conversion methods reduce embroidery machine downtime by 40% compared to traditional digitizing approaches.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2024 PRO digitizing All Rights Reserved"
+                }
+            },
+            de: {
+                translation: {
+                    "topBarEmail": "E-Mail: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Startseite",
+                    "navAbout": "Über Uns",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vektoren",
+                    "navPatches": "Aufnäher",
+                    "navEmbroidery": "Stickerei",
+                    "blogHeading1": "Beherrschung der Vektorkonvertierung für makellose Stickerei",
+                    "blogParagraph1": "<span class='main'>Die Vektorkonvertierung</span> bildet das Rückgrat von erstklassigen Stickdigitalisierungsdiensten. Unser Team verwendet <span class='main'>KI-gestützte Nachzeichnungsalgorithmen</span> in Kombination mit manueller Verfeinerung, um sogar Logos mit niedriger Auflösung in produktionsreife Stickdateien umzuwandeln. Dieser doppelte Ansatz stellt sicher, dass wir jedes Detail erfassen und gleichzeitig eine <span class='main'>Stichökonomie</span> beibehalten—entscheidend für die Reduzierung des Garnverbrauchs ohne Abstriche bei der visuellen Wirkung.",
+                    "blogParagraph2": "Für komplizierte <span class='main'>Patch-Designs</span> verwenden unsere Digitalisierer eine <span class='main'>schichtbasierte Sequenzierung</span>, die den Betrieb kommerzieller Stickmaschinen widerspiegelt. Diese Methode ermöglicht es uns, <span class='main'>Fadenspannungsprobleme</span> während der Produktion vorherzusehen und zu verhindern. Neuste Entwicklungen in unserem <span class='main'>Farbabstimmungssystem</span> können jetzt Pantone-Farbtöne mithilfe von zusammengesetzten Garnmischungen präzise reproduzieren und erreichen eine Farbgenauigkeit von 98,7% unter verschiedenen Lichtverhältnissen.",
+                    "blogParagraph3": "Unsere Techniken zur <span class='main'>Optimierung von kleinem Text</span> ermöglichen scharfe 3-mm-Schrift auf Patches—ein Durchbruch, der zuvor auf 5 mm begrenzt war. Durch <span class='main'>parametrische Unterlegungsanpassungen</span> haben wir erfolgreich komplexe medizinische Embleme mit einer Stichgenauigkeit von 0,2 mm digitalisiert, die auch nach mehr als 50 industriellen Wäschen lesbar bleiben. Fallstudien zeigen, dass unsere Vektorkonvertierungsmethoden die Ausfallzeiten der Stickmaschinen im Vergleich zu herkömmlichen Digitalisierungsansätzen um 40% reduzieren.",
+                    "footerHours": "Öffnungszeiten: Montag-Freitag<br>6:00-16:30 PST.",
+                    "footerResources": "Ressourcen",
+                    "footerAbout": "Über",
+                    "footerContact": "Kontakt",
+                    "footerEndnote": "Allgemeine Geschäftsbedingungen | Datenschutz | © 2024 PRO digitizing Alle Rechte vorbehalten"
+                }
+            },
+            it: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contatto: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Chi Siamo",
+                    "navBlogs": "Blog",
+                    "navVectors": "Vettori",
+                    "navPatches": "Patch",
+                    "navEmbroidery": "Ricamo",
+                    "blogHeading1": "Padroneggiare la Conversione Vettoriale per un Ricamo Perfetto",
+                    "blogParagraph1": "<span class='main'>La conversione vettoriale</span> è la base dei servizi di digitalizzazione di ricamo di alta qualità. Il nostro team utilizza <span class='main'>algoritmi di tracciamento basati sull'IA</span> combinati con un raffinamento manuale per convertire persino loghi a bassa risoluzione in file di ricamo pronti per la produzione. Questo approccio duale garantisce di catturare ogni dettaglio mantenendo al contempo <span class='main'>l'economia dei punti</span>, fondamentale per ridurre il consumo di filo senza compromettere l'impatto visivo.",
+                    "blogParagraph2": "Per <span class='main'>disegni di patch</span> complessi, i nostri digitalizzatori impiegano una <span class='main'>sequenza basata su livelli</span> che rispecchia il funzionamento delle macchine da ricamo commerciali. Questo metodo ci consente di prevedere e prevenire <span class='main'>problemi di tensione del filo</span> durante la produzione. Gli ultimi progressi nel nostro <span class='main'>sistema di corrispondenza dei colori</span> ora possono replicare con precisione le tonalità Pantone utilizzando miscele di fili composte, raggiungendo un'accuratezza del colore del 98,7% in varie condizioni di illuminazione.",
+                    "blogParagraph3": "Le nostre tecniche di <span class='main'>ottimizzazione del testo piccolo</span> consentono scritte nitide di 3 mm sui patch—un traguardo precedentemente limitato a 5 mm. Grazie a <span class='main'>regolazioni parametriche dell'underlay</span>, abbiamo digitalizzato con successo complesse insegne mediche con una precisione di 0,2 mm, mantenendo la leggibilità anche dopo più di 50 lavaggi industriali. Studi di caso dimostrano che i nostri metodi di conversione vettoriale riducono i tempi di inattività delle macchine da ricamo del 40% rispetto agli approcci tradizionali.",
+                    "footerHours": "Orari: Lunedì-Venerdì<br>6:00-16:30 PST.",
+                    "footerResources": "Risorse",
+                    "footerAbout": "Chi Siamo",
+                    "footerContact": "Contatto",
+                    "footerEndnote": "Termini e Condizioni | Privacy | © 2024 PRO digitizing Tutti i diritti riservati"
+                }
+            },
+            fr: {
+                translation: {
+                    "topBarEmail": "E-mail : contact@unitedpunch.com",
+                    "topBarContact": "Contact : +123-456-7890",
+                    "navHome": "Accueil",
+                    "navAbout": "À Propos",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vecteurs",
+                    "navPatches": "Patchs",
+                    "navEmbroidery": "Broderie",
+                    "blogHeading1": "Maîtriser la Conversion Vectorielle pour une Broderie Impeccable",
+                    "blogParagraph1": "<span class='main'>La conversion vectorielle</span> constitue la base des services haut de gamme de numérisation pour la broderie. Notre équipe utilise <span class='main'>des algorithmes de traçage alimentés par l'IA</span> combinés à un raffinement manuel pour convertir même les logos en basse résolution en fichiers de broderie prêts pour la production. Cette approche duale garantit que nous capturons chaque détail tout en maintenant une <span class='main'>économie de points</span>, essentielle pour réduire la consommation de fil sans compromettre l'impact visuel.",
+                    "blogParagraph2": "Pour les designs complexes de <span class='main'>patchs</span>, nos numériseurs emploient une <span class='main'>séquence basée sur les couches</span> qui reflète les opérations des machines à broder commerciales. Cette méthode nous permet de prévoir et de prévenir les <span class='main'>problèmes de tension du fil</span> lors de la production. Les avancées récentes de notre <span class='main'>système d'harmonisation des couleurs</span> peuvent désormais reproduire avec précision les teintes Pantone, atteignant une précision de 98,7% dans diverses conditions d'éclairage.",
+                    "blogParagraph3": "Nos techniques d’<span class='main'>optimisation du texte en petit format</span> permettent un lettrage net de 3mm sur les patchs—une percée auparavant limitée à 5mm. Grâce aux <span class='main'>ajustements paramétriques de sous-couche</span>, nous avons numérisé avec succès des insignes médicaux complexes avec une précision de 0,2mm, tout en maintenant la lisibilité après plus de 50 lavages industriels. Des études de cas montrent que nos méthodes de conversion vectorielle réduisent le temps d'arrêt des machines à broder de 40% par rapport aux méthodes traditionnelles.",
+                    "footerHours": "Horaires : Lundi-Vendredi<br>6:00am-4:30pm PST.",
+                    "footerResources": "Ressources",
+                    "footerAbout": "À Propos",
+                    "footerContact": "Contactez-nous",
+                    "footerEndnote": "Conditions d'utilisation | Politique de Confidentialité | © 2024 PRO digitizing Tous Droits Réservés"
+                }
+            },
+            ja: {
+                translation: {
+                    "topBarEmail": "メール: contact@unitedpunch.com",
+                    "topBarContact": "連絡先: +123-456-7890",
+                    "navHome": "ホーム",
+                    "navAbout": "私たちについて",
+                    "navBlogs": "ブログ",
+                    "navVectors": "ベクター",
+                    "navPatches": "パッチ",
+                    "navEmbroidery": "刺繍",
+                    "blogHeading1": "完璧な刺繍のためのベクター変換をマスターする",
+                    "blogParagraph1": "<span class='main'>ベクター変換</span>は高品質な刺繍デジタル化サービスの要です。私たちのチームは<span class='main'>AIを活用したトレースアルゴリズム</span>と手動の修正を組み合わせ、低解像度のロゴでも生産準備が整った刺繍ファイルに変換します。この二重のアプローチにより、<span class='main'>ステッチ効率</span>を維持しながらすべてのディテールを正確に捉え、視覚的インパクトを損なうことなく糸の消費を抑えます。",
+                    "blogParagraph2": "複雑な<span class='main'>パッチデザイン</span>では、私たちのデジタライザーは商用刺繍機の動作を反映する<span class='main'>レイヤーベースのシーケンス</span>を採用し、製造中の<span class='main'>糸張力の問題</span>を予測・防止します。最新の<span class='main'>カラーマッチングシステム</span>では、複合糸ブレンドを使用してPantone色調を正確に再現し、さまざまな照明条件下で98.7%の色精度を達成しています。",
+                    "blogParagraph3": "私たちの<span class='main'>小さな文字の最適化</span>により、パッチ上に3mmのシャープな文字を実現しました。これは以前は5mmが限界でした。<span class='main'>パラメトリック下地調整</span>を行うことで、0.2mmのステッチ精度で複雑な医療エンブレムをデジタル化し、50回以上の工業洗浄後でも判読可能です。ケーススタディでは、従来のデジタル化手法と比較して、私たちのベクター変換は刺繍機のダウンタイムを40%削減することが示されています。",
+                    "footerHours": "営業時間：月～金<br>6:00～16:30 PST.",
+                    "footerResources": "リソース",
+                    "footerAbout": "私たちについて",
+                    "footerContact": "お問い合わせ",
+                    "footerEndnote": "利用規約 | プライバシーポリシー | © 2024 PRO digitizing 無断複写・転載を禁じます"
+                }
+            },
+            sv: {
+                translation: {
+                    "topBarEmail": "E-post: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Hem",
+                    "navAbout": "Om Oss",
+                    "navBlogs": "Bloggar",
+                    "navVectors": "Vektorer",
+                    "navPatches": "Märken",
+                    "navEmbroidery": "Broderi",
+                    "blogHeading1": "Bemästra Vektorkonvertering för Felfri Brodyr",
+                    "blogParagraph1": "<span class='main'>Vektorkonvertering</span> är grunden för högkvalitativa brodyrdigitaliseringstjänster. Vårt team använder <span class='main'>AI-drivna spårningsalgoritmer</span> kombinerat med manuell bearbetning för att konvertera även lågupplösta logotyper till produktionsklara brodyrfiler. Denna dubbla metod säkerställer att varje detalj fångas samtidigt som <span class='main'>stygn-ekonomi</span> bibehålls—avgörande för att minska trådförbrukningen utan att kompromissa med den visuella effekten.",
+                    "blogParagraph2": "För invecklade <span class='main'>patchdesigner</span> använder våra digitaliserare en <span class='main'>lagerbaserad sekvens</span> som efterliknar kommersiella brodyrmaskiner. Detta låter oss förutse och förhindra <span class='main'>trådspänningsproblem</span> under produktionen. Nya framsteg i vårt <span class='main'>färganpassningssystem</span> kan exakt återskapa Pantone-nyanser med sammansatta trådblandningar, vilket ger 98,7% färgnoggrannhet i olika ljusförhållanden.",
+                    "blogParagraph3": "Våra metoder för <span class='main'>optimering av små texter</span> möjliggör skarpa 3 mm bokstäver på märken—ett genombrott som tidigare var begränsat till 5 mm. Genom <span class='main'>parametriska underläggsjusteringar</span> har vi lyckats digitalisera komplexa medicinska emblem med 0,2 mm stygnprecision, som förblir läsbara även efter 50+ industriella tvättar. Fallstudier visar att våra vektorkonverteringsmetoder minskar brodyrmaskiners stillestånd med 40% jämfört med traditionella digitaliseringsmetoder.",
+                    "footerHours": "Öppettider: Måndag-Fredag<br>6:00-16:30 PST.",
+                    "footerResources": "Resurser",
+                    "footerAbout": "Om",
+                    "footerContact": "Kontakta Oss",
+                    "footerEndnote": "Villkor & Integritetspolicy | © 2024 PRO digitizing Alla rättigheter förbehållna"
+                }
+            },
+            es: {
+                translation: {
+                    "topBarEmail": "Correo: contact@unitedpunch.com",
+                    "topBarContact": "Contacto: +123-456-7890",
+                    "navHome": "Inicio",
+                    "navAbout": "Sobre Nosotros",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectores",
+                    "navPatches": "Parches",
+                    "navEmbroidery": "Bordado",
+                    "blogHeading1": "Dominando la Conversión de Vectores para un Bordado Perfecto",
+                    "blogParagraph1": "<span class='main'>La conversión de vectores</span> es la base de los servicios premium de digitalización para bordado. Nuestro equipo utiliza <span class='main'>algoritmos de trazado impulsados por IA</span> combinados con refinamiento manual para convertir incluso logotipos de baja resolución en archivos de bordado listos para producción. Este enfoque dual garantiza que capturamos cada detalle manteniendo la <span class='main'>economía de puntadas</span>, crucial para reducir el consumo de hilo sin comprometer el impacto visual.",
+                    "blogParagraph2": "Para diseños intrincados de <span class='main'>parches</span>, nuestros digitalizadores emplean una <span class='main'>secuenciación basada en capas</span> que refleja el funcionamiento de las máquinas de bordar comerciales. Este método nos permite predecir y prevenir <span class='main'>problemas de tensión del hilo</span> durante la producción. Los avances recientes en nuestro <span class='main'>sistema de coincidencia de colores</span> pueden replicar con precisión tonos Pantone usando mezclas de hilos compuestas, logrando un 98.7% de precisión de color en diversas condiciones de iluminación.",
+                    "blogParagraph3": "Nuestras técnicas de <span class='main'>optimización de texto pequeño</span> permiten obtener letras nítidas de 3mm en parches—un avance antes limitado a 5mm. Mediante <span class='main'>ajustes paramétricos de bajo</span>, hemos digitalizado con éxito insignias médicas complejas con una precisión de puntada de 0.2mm, manteniendo la legibilidad incluso después de más de 50 lavados industriales. Estudios de caso muestran que nuestros métodos de conversión de vectores reducen el tiempo de inactividad de la máquina de bordar en un 40% comparado con los métodos tradicionales.",
+                    "footerHours": "Horario: Lunes-Viernes<br>6:00am-4:30pm PST.",
+                    "footerResources": "Recursos",
+                    "footerAbout": "Acerca de",
+                    "footerContact": "Contáctanos",
+                    "footerEndnote": "Términos y Condiciones | Política de Privacidad | © 2024 PRO digitizing Todos los Derechos Reservados"
+                }
+            },
+            nl: {
+                translation: {
+                    "topBarEmail": "E-mail: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Over Ons",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectoren",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Borduurwerk",
+                    "blogHeading1": "Beheers de Vectorconversie voor Perfect Borduurwerk",
+                    "blogParagraph1": "<span class='main'>Vectorconversie</span> vormt de ruggengraat van hoogwaardige borduurdigitaliseringsdiensten. Ons team maakt gebruik van <span class='main'>AI-aangedreven traceeralgoritmen</span> in combinatie met handmatige verfijning om zelfs logo's met lage resolutie om te zetten in productierijpe borduurbestanden. Deze dubbele aanpak zorgt ervoor dat we elk detail vastleggen en tegelijkertijd <span class='main'>steek-economie</span> handhaven—cruciaal om het garenverbruik te verminderen zonder in te leveren op visuele impact.",
+                    "blogParagraph2": "Voor complexe <span class='main'>patch-ontwerpen</span> gebruiken onze digitaliseerders een <span class='main'>laaggebaseerde sequentie</span> die het gebruik van commerciële borduurmachines weerspiegelt. Dit stelt ons in staat <span class='main'>draadspanningsproblemen</span> tijdens de productie te voorspellen en te voorkomen. Recente ontwikkelingen in ons <span class='main'>kleuraanpassingssysteem</span> maken het nu mogelijk om Pantone-tinten nauwkeurig te reproduceren met samengestelde garenmixen, wat zorgt voor 98,7% kleurnauwkeurigheid onder diverse lichtomstandigheden.",
+                    "blogParagraph3": "Onze technieken voor <span class='main'>optimalisatie van kleine teksten</span> maken scherpe 3 mm letters op patches mogelijk—een doorbraak die voorheen beperkt was tot 5 mm. Door <span class='main'>parametrische onderlegaanpassingen</span> hebben we complexe medische emblemen succesvol gedigitaliseerd met een steekprecisie van 0,2 mm, die leesbaar blijven na meer dan 50 industriële wasbeurten. Casestudy's tonen aan dat onze vectorconversiemethoden de stilstandtijd van borduurmachines met 40% verminderen in vergelijking met traditionele digitaliseringsmethoden.",
+                    "footerHours": "Openingstijden: Maandag-Vrijdag<br>6:00-16:30 PST.",
+                    "footerResources": "Bronnen",
+                    "footerAbout": "Over",
+                    "footerContact": "Contact",
+                    "footerEndnote": "Algemene Voorwaarden | Privacybeleid | © 2024 PRO digitizing Alle rechten voorbehouden"
+                }
+            }
+        };
 
-    // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem("theme") || "light";
-    html.setAttribute("data-theme", savedTheme);
+        // Initialize i18next
+        i18next.init({
+            lng: 'en', // Default language
+            debug: false,
+            resources: resources
+        }, function (err, t) {
+            updateContent();
+        });
 
-    // Toggle Theme on Button Click
-    themeToggle.addEventListener("click", function () {
-        let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        // Switch language
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, function (err, t) {
+                updateContent();
+            });
+        }
 
-        // Apply New Theme
-        html.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme); // Save preference
-    });
-</script>
+        // Update all elements with data-i18n
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(function (element) {
+                const key = element.getAttribute('data-i18n');
+                element.innerHTML = i18next.t(key);
+            });
+        }
+    </script>
 
 </html>

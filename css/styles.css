@@ -876,3 +876,13 @@ h2 {
 .theme-toggle {
   filter: drop-shadow(7px 1px 4px var(--primary-color));
 }
+
+.language-switcher {
+  width: 20px;
+  gap: 10px;
+  display: flex;
+}
+
+.language-switcher img {
+  width: 100%;
+}

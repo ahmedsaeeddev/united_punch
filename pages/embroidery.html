@@ -4,20 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Embroider - Quality Control in Modern Embroidery Production</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/blogs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include i18next CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 </head>
 
 <body>
+    <!-- Language Switcher with 8 flags -->
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+        <!-- Updated flags and order to match your provided image -->
+        <img onclick="changeLanguage('en')" src="../assets/img/america.png" />
+        <img onclick="changeLanguage('de')" src="../assets/img/german.png" />
+        <img onclick="changeLanguage('it')" src="../assets/img/italy.png" />
+        <img onclick="changeLanguage('fr')" src="../assets/img/france.png" />
+        <img onclick="changeLanguage('ja')" src="../assets/img/japan.png" />
+        <img onclick="changeLanguage('sv')" src="../assets/img/sweden.png" />
+        <img onclick="changeLanguage('es')" src="../assets/img/spain.png" />
+        <img onclick="changeLanguage('nl')" src="../assets/img/netherlands.png" />
+    </div>
+
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar">
-                <div>Email: contact@unitedpunch.com</div>
-                <div>Contact: +123-456-7890</div>
+                <div data-i18n="topBarEmail">Email: contact@unitedpunch.com</div>
+                <div data-i18n="topBarContact">Contact: +123-456-7890</div>
             </div>
         </div>
     </div>
@@ -26,204 +42,481 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-links-left">
-                <a href="../index.html">Home</a>
-                <a href="../pages/about.html">About Us</a>
-                <a href="../pages/blogs.html">Blogs</a>
+                <a href="../index.html" data-i18n="navHome">Home</a>
+                <a href="../pages/about.html" data-i18n="navAbout">About Us</a>
+                <a href="../pages/blogs.html" data-i18n="navBlogs">Blogs</a>
             </div>
             <div class="navbar-logo">
-                <a href="../index.html">UNITED<img src="../assets/img/logo.png" alt="">PUNCH</a>
-
+                <a href="../index.html">
+                    UNITED
+                    <img src="../assets/img/logo.png" alt="Logo" />
+                    PUNCH
+                </a>
+                <a class="theme-toggle" id="themeToggle">🌙</a>
             </div>
             <div class="navbar-links-right">
-                <a href="../pages/vectors.html">Vectors</a>
-                <a href="../pages/patches.html">Patches</a>
-                <a href="../pages/embroidery.html">Embroidery</a>
-                <button class="theme-toggle" id="themeToggle">☀ / 🌙</button>
+                <a href="../pages/vectors.html" data-i18n="navVectors">Vectors</a>
+                <a href="../pages/patches.html" data-i18n="navPatches">Patches</a>
+                <a href="../pages/embroidery.html" data-i18n="navEmbroidery">Embroidery</a>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="../index.html" onclick="toggleMenu()">Home</a>
-            <a href="../pages/about.html" onclick="toggleMenu()">About Us</a>
-            <a href="../pages/blogs.html" onclick="toggleMenu()">Blogs</a>
-            <a href="../pages/vectors.html" onclick="toggleMenu()">Vectors</a>
-            <a href="../pages/patches.html" onclick="toggleMenu()">Patches</a>
-            <a href="../pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
+            <a href="../index.html" onclick="toggleMenu()" data-i18n="navHome">Home</a>
+            <a href="../pages/about.html" onclick="toggleMenu()" data-i18n="navAbout">About Us</a>
+            <a href="../pages/blogs.html" onclick="toggleMenu()" data-i18n="navBlogs">Blogs</a>
+            <a href="../pages/vectors.html" onclick="toggleMenu()" data-i18n="navVectors">Vectors</a>
+            <a href="../pages/patches.html" onclick="toggleMenu()" data-i18n="navPatches">Patches</a>
+            <a href="../pages/embroidery.html" onclick="toggleMenu()" data-i18n="navEmbroidery">Embroidery</a>
         </div>
     </nav>
-  
-    <!-- Blogs Section -->
+
+    <!-- Blogs Section (Embroider Content) -->
     <section class="blogs-section">
         <div class="blog">
             <div class="blog-content">
-                <h2>Quality Control in Modern Embroidery Production</h2>
-                <p class="main-paragraph">
-                    Our 7-stage <span class="main">quality assurance protocol</span> includes
-                    <span class="main">automated stitch auditing</span> that checks 142
-                    parameters per design, from tension consistency to color bleed risks.
-                    The <span class="main">fabric simulation software</span> predicts
-                    embroidery outcomes across 58 material types, allowing pre-production
-                    adjustments that reduce sampling iterations by 70%.
+                <h2 data-i18n="blogHeading">Quality Control in Modern Embroidery Production</h2>
+                <p class="main-paragraph" data-i18n="blogParagraph1">
+                    Our 7-stage <span class="main">quality assurance protocol</span> includes <span
+                        class="main">automated stitch auditing</span> that checks 142 parameters per design, from
+                    tension consistency to color bleed risks. The <span class="main">fabric simulation software</span>
+                    predicts embroidery outcomes across 58 material types, allowing pre-production adjustments that
+                    reduce sampling iterations by 70%.
                 </p>
-                <p class="main-paragraph">
-                    For mission-critical applications like <span class="main">military patches</span>,
-                    we employ <span class="main">laser alignment technology</span> achieving
-                    0.01mm registration accuracy. Our <span class="main">ISO 9001-certified</span>
-                    process includes batch-level tracking and 300% magnification inspections,
-                    maintaining defect rates below 0.2% for 12 consecutive quarters.
+                <p class="main-paragraph" data-i18n="blogParagraph2">
+                    For mission-critical applications like <span class="main">military patches</span>, we employ <span
+                        class="main">laser alignment technology</span> achieving 0.01mm registration accuracy. Our <span
+                        class="main">ISO 9001-certified</span> process includes batch-level tracking and 300%
+                    magnification inspections, maintaining defect rates below 0.2% for 12 consecutive quarters.
                 </p>
-                <p class="main-paragraph">
-                    The <span class="main">real-time monitoring system</span> tracks 18
-                    production variables simultaneously, from humidity levels to needle
-                    temperature. This data-driven approach has improved consistency metrics
-                    by 53% year-over-year. All designs undergo <span class="main">wash cycle
-                        simulations</span> replicating 5 years of use, ensuring color fastness
-                    and shape retention meet MIL-SPEC standards.
+                <p class="main-paragraph" data-i18n="blogParagraph3">
+                    The <span class="main">real-time monitoring system</span> tracks 18 production variables
+                    simultaneously, from humidity levels to needle temperature. This data-driven approach has improved
+                    consistency metrics by 53% year-over-year. All designs undergo <span class="main">wash cycle
+                        simulations</span> replicating 5 years of use, ensuring color fastness and shape retention meet
+                    MIL-SPEC standards.
                 </p>
             </div>
             <div class="blog-image">
-                <img src="https://evocon.com/wp-content/uploads/2022/05/evocon-at-whiteboard-1200x698.jpeg.webp"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQslp0hSF3BHJuupZiGOCoeW6wL9YL88hNeOg&s"
                     alt="Quality Assurance">
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo and Working Hours -->
             <div class="footer-section">
                 <img src="../assets/img/logo.png" alt="United Punch Logo" class="footer-logo">
-                <p class="main-paragraph">Hours: Monday-Friday<br>6:00am-4:30pm PST.</p>
+                <p class="main-paragraph" data-i18n="footerHours">Hours: Monday-Friday<br>6:00am-4:30pm PST.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-
             <!-- Resources Links -->
             <div class="footer-section">
-                <h3>Resources</h3>
+                <h3 data-i18n="footerResources">Resources</h3>
                 <ul>
                     <li><a href="#">Our Blog</a></li>
                     <li><a href="#">Free Design Library</a></li>
                 </ul>
             </div>
-
             <!-- About Links -->
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footerAbout">About</h3>
                 <ul>
-                    <li><a href="#">Embroidery Digitizing</a></li>
-                    <li><a href="#">Vector Art</a></li>
-                    <li><a href="#">Our Prices</a></li>
-                    <li><a href="#">Bulk Pricing</a></li>
-                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Embroidery Digitizing Services</a></li>
+                    <li><a href="#">Patches</a></li>
+                    <li><a href="#">Vector Art Expert</a></li>
+                    <li><a href="#">Our Minimal Pricing</a></li>
+                    <li><a href="#">Range of Bulk Pricing</a></li>
+                    <li><a href="#">Our Professionals</a></li>
                 </ul>
             </div>
-
             <!-- Contact Info -->
             <div class="footer-section">
-                <h3>Contact Us</h3>
+                <h3 data-i18n="footerContact">Contact Us</h3>
                 <p class="main-paragraph">Text: <a href="tel:8774425675">(877) 442-5675</a></p>
                 <p class="main-paragraph">Email: <a href="mailto:design@prodigitizing.com">design@prodigitizing.com</a>
                 </p>
-                <p class="main-paragraph">For international calls: <br><a href="tel:6195911084">619-591-1084</a></p>
+                <p class="main-paragraph">For international calls: <br><a href="tel:6195911084">619-5911084</a></p>
                 <h4>Contact Sales & Support:</h4>
                 <p class="main-paragraph"><a href="tel:8774425675">(877) 442-5675</a></p>
                 <p class="main-paragraph"><a href="#">Get Embroidery Quote</a></p>
                 <p class="main-paragraph"><a href="#">Get Vector Quote</a></p>
             </div>
         </div>
-
         <!-- Endnote -->
         <div class="footer-endnote">
-            <p>Terms and Conditions | Privacy Policy | © 2024 PRO digitizing All Rights Reserved</p>
+            <p data-i18n="footerEndnote">Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights
+                Reserved.</p>
         </div>
     </footer>
 
+    <!-- External Scripts -->
+    <script src="./scripts/index.js"></script>
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            let menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const htmlElement = document.documentElement;
+        const savedTheme = localStorage.getItem("theme") || "light";
+        htmlElement.setAttribute("data-theme", savedTheme);
+        themeToggle.addEventListener("click", function () {
+            let newTheme = htmlElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            htmlElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+
+    <!-- i18next Integration Script -->
+    <script>
+        // Define translation resources for 8 languages
+        const resources = {
+            en: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "About Us",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectors",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Embroidery",
+                    "bannerHeading": "Raster to Vector Art Conversion",
+                    "bannerParagraph": "We convert your images into high-quality vector art. Our team of 150+ vector artists ensures the best quality files, including AI, PSD, CorelDraw, and more.",
+                    "bannerButton": "Learn More",
+                    "digitizingHeading": "Best Digitizing Company in USA",
+                    "digitizingParagraph": "Welcome to United Punch, one of the most valued digitizing companies worldwide. We merge innovation with precision to transform your ideas into exceptional digital designs.",
+                    "feature1Heading": "Lightning Fast Delivery",
+                    "feature1Paragraph": "Our expert team digitizes your designs in just 3 to 4 hours, ensuring quick and high-quality completion.",
+                    "feature2Heading": "High-Quality Precision",
+                    "feature2Paragraph": "We pay attention to every detail, converting your designs into a perfect, pixel-perfect format.",
+                    "feature3Heading": "Skilled & Experienced Team",
+                    "feature3Paragraph": "Our professional digitizers and vector artists have the experience to complete every project to industry standards.",
+                    "feature4Heading": "Customer Satisfaction",
+                    "feature4Paragraph": "Your happiness is our top priority! We deliver every project with perfection and dedication.",
+                    "feature5Heading": "Global Reach",
+                    "feature5Paragraph": "No matter where you are, our services are available globally. We are here for you anywhere!",
+                    "feature6Heading": "Why Choose Us?",
+                    "feature6Paragraph": "We don't just offer services; we provide an exceptional experience with fast delivery, best quality, and 24/7 support.",
+                    "blogHeading": "Quality Control in Modern Embroidery Production",
+                    "blogParagraph1": "Our 7-stage <span class='main'>quality assurance protocol</span> includes <span class='main'>automated stitch auditing</span> that checks 142 parameters per design, from tension consistency to color bleed risks. The <span class='main'>fabric simulation software</span> predicts embroidery outcomes across 58 material types, allowing pre-production adjustments that reduce sampling iterations by 70%.",
+                    "blogParagraph2": "For mission-critical applications like <span class='main'>military patches</span>, we employ <span class='main'>laser alignment technology</span> achieving 0.01mm registration accuracy. Our <span class='main'>ISO 9001-certified</span> process includes batch-level tracking and 300% magnification inspections, maintaining defect rates below 0.2% for 12 consecutive quarters.",
+                    "blogParagraph3": "The <span class='main'>real-time monitoring system</span> tracks 18 production variables simultaneously, from humidity levels to needle temperature. This data-driven approach has improved consistency metrics by 53% year-over-year. All designs undergo <span class='main'>wash cycle simulations</span> replicating 5 years of use, ensuring color fastness and shape retention meet MIL-SPEC standards.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            de: {
+                translation: {
+                    "topBarEmail": "E-Mail: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Startseite",
+                    "navAbout": "Über Uns",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vektoren",
+                    "navPatches": "Aufnäher",
+                    "navEmbroidery": "Stickerei",
+                    "bannerHeading": "Raster zu Vektor Umwandlung",
+                    "bannerParagraph": "Wir konvertieren Ihre Bilder in hochwertige Vektorgrafiken. Unser Team von über 150 Vektorkünstlern sorgt für erstklassige Dateien, einschließlich AI, PSD, CorelDraw und mehr.",
+                    "bannerButton": "Mehr Erfahren",
+                    "digitizingHeading": "Bestes Digitalisierungsunternehmen in den USA",
+                    "digitizingParagraph": "Willkommen bei United Punch, einem der angesehensten Digitalisierungsunternehmen weltweit. Wir verbinden Innovation mit Präzision, um Ihre Ideen in außergewöhnliche digitale Designs umzusetzen.",
+                    "feature1Heading": "Blitzschnelle Lieferung",
+                    "feature1Paragraph": "Unser Expertenteam digitalisiert Ihre Designs in nur 3 bis 4 Stunden und garantiert schnelle, hochwertige Fertigstellung.",
+                    "feature2Heading": "Hochpräzise Qualität",
+                    "feature2Paragraph": "Wir achten auf jedes Detail und konvertieren Ihre Designs in ein perfektes, pixelgenaues Format.",
+                    "feature3Heading": "Erfahrenes Team",
+                    "feature3Paragraph": "Unsere professionellen Digitalisierer und Vektorkünstler verfügen über umfangreiche Erfahrung, um jedes Projekt gemäß den Industriestandards abzuschließen.",
+                    "feature4Heading": "Kundenzufriedenheit",
+                    "feature4Paragraph": "Ihre Zufriedenheit hat oberste Priorität! Wir liefern jedes Projekt mit höchster Präzision und Engagement.",
+                    "feature5Heading": "Weltweite Reichweite",
+                    "feature5Paragraph": "Unabhängig von Ihrem Standort sind unsere Dienste weltweit verfügbar. Wir sind immer für Sie da!",
+                    "feature6Heading": "Warum Uns Wählen?",
+                    "feature6Paragraph": "Wir bieten nicht nur Dienstleistungen, sondern ein außergewöhnliches Erlebnis mit schneller Lieferung, bester Qualität und 24/7 Support.",
+                    "blogHeading": "Quality Control in Modern Embroidery Production",
+                    "blogParagraph1": "Unser 7-stufiges Qualitätssicherungsprotokoll umfasst automatisierte Stichprüfungen, die 142 Parameter pro Design überprüfen, von Spannungskonstanz bis zu Farbübergangsrisiken. Unsere Stoffsimulationssoftware prognostiziert die Stickresultate für 58 Materialtypen und ermöglicht Vorproduktionen, die die Musterwiederholungen um 70% reduzieren.",
+                    "blogParagraph2": "Für kritische Anwendungen wie militärische Aufnäher setzen wir Laserausrichtungstechnologie mit 0.01mm Präzision ein. Unser ISO 9001-zertifiziertes Verfahren beinhaltet Chargenverfolgung und Inspektionen mit 300% Vergrößerung, wodurch die Fehlerquote 12 aufeinanderfolgende Quartale unter 0.2% gehalten wird.",
+                    "blogParagraph3": "Das Echtzeit-Überwachungssystem verfolgt 18 Produktionsvariablen simultan, von der Luftfeuchtigkeit bis zur Nadeltemperatur. Dieser datengetriebene Ansatz hat die Konsistenz um 53% im Jahresvergleich verbessert. Alle Designs durchlaufen Waschanlagensimulationen, die 5 Jahre Nutzung nachahmen, und stellen sicher, dass Farbtreue und Formstabilität den MIL-SPEC-Normen entsprechen.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            it: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contatto: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Chi Siamo",
+                    "navBlogs": "Blog",
+                    "navVectors": "Vettori",
+                    "navPatches": "Patch",
+                    "navEmbroidery": "Ricamo",
+                    "bannerHeading": "Conversione da Raster a Arte Vettoriale",
+                    "bannerParagraph": "Convertiamo le tue immagini in arte vettoriale di alta qualità. Il nostro team di oltre 150 artisti vettoriali garantisce file di prima qualità, inclusi AI, PSD, CorelDraw e altro.",
+                    "bannerButton": "Scopri di Più",
+                    "digitizingHeading": "Migliore Azienda di Digitalizzazione negli USA",
+                    "digitizingParagraph": "Benvenuto in United Punch, una delle aziende di digitalizzazione più apprezzate al mondo. Uniamo innovazione e precisione per trasformare le tue idee in design digitali eccezionali.",
+                    "feature1Heading": "Consegna Rapida",
+                    "feature1Paragraph": "Il nostro team di esperti digitalizza i tuoi design in sole 3-4 ore, garantendo una consegna rapida e di alta qualità.",
+                    "feature2Heading": "Precisione di Alta Qualità",
+                    "feature2Paragraph": "Prestiamo attenzione ad ogni dettaglio, convertendo i tuoi design in un formato perfetto e pixel-perfect.",
+                    "feature3Heading": "Team Esperto",
+                    "feature3Paragraph": "I nostri digitalizzatori e artisti vettoriali professionisti hanno l’esperienza per completare ogni progetto secondo gli standard del settore.",
+                    "feature4Heading": "Soddisfazione del Cliente",
+                    "feature4Paragraph": "La tua soddisfazione è la nostra massima priorità! Consegniamo ogni progetto con perfezione e dedizione.",
+                    "feature5Heading": "Copertura Globale",
+                    "feature5Paragraph": "Ovunque tu sia, i nostri servizi sono disponibili in tutto il mondo. Siamo qui per te, ovunque!",
+                    "feature6Heading": "Perché Scegliere Noi?",
+                    "feature6Paragraph": "Non offriamo solo servizi, ma un'esperienza eccezionale con consegna rapida, qualità superiore e supporto 24/7.",
+                    "blogHeading": "Quality Control in Modern Embroidery Production",
+                    "blogParagraph1": "Il nostro protocollo di controllo qualità a 7 fasi include controlli automatizzati che verificano 142 parametri per design, dalla stabilità della tensione al rischio di trasferimento colore. Il software di simulazione dei tessuti prevede i risultati della broderia su 58 tipi di materiali, permettendo aggiustamenti pre-produzione che riducono i cicli di campionamento del 70%.",
+                    "blogParagraph2": "Per applicazioni critiche come i patch militari, utilizziamo la tecnologia laser per l’allineamento con una precisione di 0,01 mm. Il nostro processo certificato ISO 9001 include il tracciamento dei lotti e ispezioni con ingrandimenti del 300%, mantenendo il tasso di difetti inferiore allo 0,2% per 12 trimestri consecutivi.",
+                    "blogParagraph3": "Il sistema di monitoraggio in tempo reale controlla 18 variabili di produzione simultaneamente, dall’umidità alla temperatura dell’ago. Questo approccio ha migliorato la coerenza del 53% anno su anno. Tutti i design passano attraverso simulazioni di cicli di lavaggio che replicano 5 anni d’uso, garantendo che la tenuta del colore e la forma rispettino gli standard MIL-SPEC.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            ja: {
+                translation: {
+                    "topBarEmail": "メール: contact@unitedpunch.com",
+                    "topBarContact": "連絡先: +123-456-7890",
+                    "navHome": "ホーム",
+                    "navAbout": "会社概要",
+                    "navBlogs": "ブログ",
+                    "navVectors": "ベクター",
+                    "navPatches": "パッチ",
+                    "navEmbroidery": "刺繍",
+                    "bannerHeading": "ラスタからベクターアートへの変換",
+                    "bannerParagraph": "私たちは画像を高品質なベクターアートに変換します。150人以上のベクターアーティストが、AI、PSD、CorelDrawなど最高品質のファイルを提供します。",
+                    "bannerButton": "詳しく見る",
+                    "digitizingHeading": "アメリカ最高のデジタイズ企業",
+                    "digitizingParagraph": "United Punchへようこそ。世界で高く評価されるデジタイズ企業の一つです。イノベーションと精度を融合し、あなたのアイデアを卓越したデジタルデザインに変換します。",
+                    "feature1Heading": "超高速納品",
+                    "feature1Paragraph": "私たちの専門チームは、わずか3～4時間でデザインをデジタイズし、迅速かつ高品質な仕上がりを保証します。",
+                    "feature2Heading": "高精度クオリティ",
+                    "feature2Paragraph": "細部にわたり注意を払い、完璧でピクセル単位の正確なフォーマットに変換します。",
+                    "feature3Heading": "熟練したチーム",
+                    "feature3Paragraph": "プロのデジタイザーとベクターアーティストが、業界基準に従ってプロジェクトを完了する経験を持っています。",
+                    "feature4Heading": "顧客満足",
+                    "feature4Paragraph": "お客様の満足が最優先です！私たちはすべてのプロジェクトを完璧に、かつ献身的にお届けします。",
+                    "feature5Heading": "グローバル対応",
+                    "feature5Paragraph": "どこにいても、私たちのサービスは世界中で利用可能です。いつでもどこでもサポートいたします。",
+                    "feature6Heading": "なぜ私たちを選ぶのか？",
+                    "feature6Paragraph": "単なるサービス提供ではなく、高速納品、最高品質、24/7サポートを備えた特別な体験をお届けします。",
+                    "blogHeading": "現代の刺繍生産における品質管理",
+                    "blogParagraph1": "私たちの7段階の品質保証プロトコルには、テンションの一貫性から色移りリスクまで、各デザインの142パラメータを自動で監査するシステムが含まれます。生地シミュレーションソフトは、58種類の素材における刺繍結果を予測し、生産前に調整することでサンプル回数を70%削減します。",
+                    "blogParagraph2": "軍用パッチなどのミッションクリティカルな用途には、0.01mmの精度で位置合わせを行うレーザー技術を採用しています。ISO 9001認証のプロセスにより、バッチ追跡と300%の倍率での検査が実施され、12四半期連続で不良率が0.2%未満に保たれています。",
+                    "blogParagraph3": "リアルタイム監視システムは、湿度から針温まで18の生産変数を同時に追跡します。このデータ駆動型アプローチにより、一年あたりの一貫性が53%向上しました。すべてのデザインは、5年間の使用を模倣する洗濯サイクルシミュレーションを受け、MIL-SPEC基準を満たす色の堅牢性と形状保持を保証します。",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            sv: {
+                translation: {
+                    "topBarEmail": "E-post: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Hem",
+                    "navAbout": "Om Oss",
+                    "navBlogs": "Bloggar",
+                    "navVectors": "Vektorer",
+                    "navPatches": "Märken",
+                    "navEmbroidery": "Broderi",
+                    "bannerHeading": "Raster till Vektor Konvertering",
+                    "bannerParagraph": "Vi omvandlar dina bilder till högkvalitativ vektorkonst. Vårt team med 150+ vektorkonstnärer säkerställer de bästa filerna, inklusive AI, PSD, CorelDraw och mer.",
+                    "bannerButton": "Läs Mer",
+                    "digitizingHeading": "Bästa Digitaliseringsföretaget i USA",
+                    "digitizingParagraph": "Välkommen till United Punch, ett av de mest uppskattade digitaliseringsföretagen i världen. Vi kombinerar innovation med precision för att omvandla dina idéer till exceptionella digitala designer.",
+                    "feature1Heading": "Blixtsnabb Leverans",
+                    "feature1Paragraph": "Vårt expertteam digitaliserar dina designer på bara 3 till 4 timmar och garanterar snabb och högkvalitativ produktion.",
+                    "feature2Heading": "Högkvalitativ Precision",
+                    "feature2Paragraph": "Vi lägger märke till varje detalj och omvandlar dina designer till ett perfekt, pixelfint format.",
+                    "feature3Heading": "Erfaret Team",
+                    "feature3Paragraph": "Våra professionella digitaliserare och vektorkonstnärer har erfarenhet av att slutföra varje projekt enligt branschstandarder.",
+                    "feature4Heading": "Kundnöjdhet",
+                    "feature4Paragraph": "Din tillfredsställelse är vår högsta prioritet! Vi levererar varje projekt med perfektion och engagemang.",
+                    "feature5Heading": "Global Räckvidd",
+                    "feature5Paragraph": "Oavsett var du befinner dig är våra tjänster tillgängliga globalt. Vi finns här för dig, var du än är!",
+                    "feature6Heading": "Varför Välja Oss?",
+                    "feature6Paragraph": "Vi erbjuder inte bara tjänster, utan en exceptionell upplevelse med snabb leverans, bästa kvalitet och 24/7 support.",
+                    "blogHeading": "Mastering Vector Conversion for Flawless Embroidery",
+                    "blogParagraph1": "Vektorkonvertering utgör grunden för premium digitalisering av broderier. Vårt team använder AI-drivna spårningsalgoritmer tillsammans med manuell finjustering för att omvandla även lågupplösta logotyper till produktionsklara broderifiler. Detta dubbla angreppssätt säkerställer att varje detalj fångas och att optimal stygn-ekonomi bibehålls.",
+                    "blogParagraph2": "För intrikata patchdesigner använder våra digitaliserare lagerbaserad sekvensering som speglar driften hos kommersiella broderimaskiner. Detta gör det möjligt att förutse och förhindra trådspänningsproblem. Nya framsteg i vårt färgmatchningssystem ger 98,7% färgnoggrannhet under varierande ljusförhållanden.",
+                    "blogParagraph3": "Våra tekniker för optimering av små texter möjliggör skarpa 3 mm tryck på patchar – ett genombrott som tidigare var begränsat till 5 mm. Med parametriska underlagsjusteringar har vi digitaliserat komplexa medicinska emblem med en stygnprecision på 0,2 mm, vilket bibehåller läsbarheten även efter över 50 industriella tvättar. Fallstudier visar att våra metoder minskar broderimaskinens stillestånd med 40%.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            nl: {
+                translation: {
+                    "topBarEmail": "E-mail: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Over Ons",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectoren",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Borduurwerk",
+                    "bannerHeading": "Conversie van Raster naar Vector Art",
+                    "bannerParagraph": "Wij zetten uw afbeeldingen om in hoogwaardige vector-art. Ons team van meer dan 150 vectorartiesten levert bestanden van de hoogste kwaliteit, waaronder AI, PSD, CorelDraw en meer.",
+                    "bannerButton": "Meer Informatie",
+                    "digitizingHeading": "Beste Digitaliseringsbedrijf in de VS",
+                    "digitizingParagraph": "Welkom bij United Punch, een van de meest gewaardeerde digitaliseringsbedrijven wereldwijd. Wij combineren innovatie met precisie om uw ideeën om te zetten in uitzonderlijke digitale ontwerpen.",
+                    "feature1Heading": "Razendsnelle Levering",
+                    "feature1Paragraph": "Ons deskundige team digitaliseert uw ontwerpen in slechts 3 tot 4 uur, wat snelle en kwalitatief hoogwaardige resultaten garandeert.",
+                    "feature2Heading": "Hoogwaardige Precisie",
+                    "feature2Paragraph": "Wij letten op elk detail en zetten uw ontwerpen om in een perfect, pixel-nauwkeurig formaat.",
+                    "feature3Heading": "Vakkundig Team",
+                    "feature3Paragraph": "Onze professionele digitaliseerders en vectorartiesten hebben de ervaring om elk project volgens de industrienormen af te ronden.",
+                    "feature4Heading": "Klanttevredenheid",
+                    "feature4Paragraph": "Uw tevredenheid is onze hoogste prioriteit! Wij leveren elk project met perfectie en toewijding.",
+                    "feature5Heading": "Wereldwijde Bereikbaarheid",
+                    "feature5Paragraph": "Ongeacht waar u zich bevindt, zijn onze diensten wereldwijd beschikbaar. Wij staan altijd voor u klaar!",
+                    "feature6Heading": "Waarom Voor Ons Kiezen?",
+                    "feature6Paragraph": "Wij bieden niet alleen diensten, maar een uitzonderlijke ervaring met snelle levering, de beste kwaliteit en 24/7 ondersteuning.",
+                    "blogHeading": "Mastering Vector Conversion for Flawless Embroidery",
+                    "blogParagraph1": "Vectorconversie vormt de basis van onze premium digitaliseringsdiensten voor broderijen. Ons team maakt gebruik van AI-gestuurde traceeralgoritmen in combinatie met handmatige verfijning om zelfs lage resolutie logo's om te zetten in productieklare broderifiles. Deze aanpak zorgt ervoor dat elk detail wordt vastgelegd en dat de optimale steek-economie behouden blijft.",
+                    "blogParagraph2": "Voor complexe patchontwerpen gebruiken onze digitaliseerders een laaggebaseerde sequentie die de werking van commerciële broderimachines weerspiegelt. Dit maakt het mogelijk om draadspanningsproblemen te voorspellen en te voorkomen. Recente innovaties in ons kleurmatchingsysteem bereiken een kleurprecisie van 98,7% met samengestelde garenmengsels.",
+                    "blogParagraph3": "Onze technieken voor optimalisatie van kleine teksten zorgen voor scherpe 3 mm letters op patches – een resultaat dat voorheen beperkt was tot 5 mm. Met parametrische onderlegaanpassingen hebben we complexe medische emblematen gedigitaliseerd met een steekprecisie van 0,2 mm, zelfs na meer dan 50 industriële wasbeurten. Case studies tonen aan dat onze methoden de stilstandtijd van broderimachines met 40% verminderen.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            // Spanish (es)
+            es: {
+                translation: {
+                    "topBarEmail": "Correo: contact@unitedpunch.com",
+                    "topBarContact": "Contacto: +123-456-7890",
+                    "navHome": "Inicio",
+                    "navAbout": "Sobre Nosotros",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectores",
+                    "navPatches": "Parches",
+                    "navEmbroidery": "Bordado",
+                    "bannerHeading": "Conversión de Raster a Arte Vectorial",
+                    "bannerParagraph": "Convertimos tus imágenes en arte vectorial de alta calidad. Nuestro equipo de más de 150 artistas vectoriales garantiza los mejores archivos, incluyendo AI, PSD, CorelDraw, y más.",
+                    "bannerButton": "Aprender Más",
+                    "digitizingHeading": "La Mejor Empresa de Digitalización en EE. UU.",
+                    "digitizingParagraph": "Bienvenido a United Punch, una de las empresas de digitalización más valoradas en el mundo. Fusionamos innovación y precisión para transformar tus ideas en diseños digitales excepcionales.",
+                    "feature1Heading": "Entrega Rápida",
+                    "feature1Paragraph": "Nuestro equipo de expertos digitaliza tus diseños en solo 3 a 4 horas, asegurando una finalización rápida y de alta calidad.",
+                    "feature2Heading": "Alta Precisión",
+                    "feature2Paragraph": "Prestamos atención a cada detalle, convirtiendo tus diseños en un formato perfecto y pixel-perfect.",
+                    "feature3Heading": "Equipo Calificado",
+                    "feature3Paragraph": "Nuestros digitalizadores y artistas vectoriales profesionales tienen la experiencia para completar cada proyecto según los estándares de la industria.",
+                    "feature4Heading": "Satisfacción del Cliente",
+                    "feature4Paragraph": "¡Tu satisfacción es nuestra prioridad! Entregamos cada proyecto con perfección y dedicación.",
+                    "feature5Heading": "Alcance Global",
+                    "feature5Paragraph": "No importa dónde te encuentres, nuestros servicios están disponibles a nivel mundial. ¡Estamos aquí para ti!",
+                    "feature6Heading": "¿Por Qué Elegirnos?",
+                    "feature6Paragraph": "No solo ofrecemos servicios, sino una experiencia excepcional con entrega rápida, la mejor calidad y soporte 24/7.",
+                    "blogHeading": "Quality Control in Modern Embroidery Production",
+                    "blogParagraph1": "Nuestro protocolo de control de calidad en 7 etapas incluye auditorías automatizadas de puntadas que revisan 142 parámetros por diseño, desde la consistencia de la tensión hasta el riesgo de sangrado de color. El software de simulación de telas predice los resultados de bordado en 58 tipos de materiales, permitiendo ajustes previos a la producción que reducen los ciclos de muestreo en un 70%.",
+                    "blogParagraph2": "Para aplicaciones críticas, como parches militares, utilizamos tecnología de alineación láser con una precisión de 0.01mm. Nuestro proceso certificado ISO 9001 incluye seguimiento por lote y controles con un aumento del 300%, manteniendo las tasas de defectos por debajo del 0.2% durante 12 trimestres consecutivos.",
+                    "blogParagraph3": "El sistema de monitoreo en tiempo real rastrea 18 variables de producción simultáneamente, desde los niveles de humedad hasta la temperatura de la aguja. Este enfoque basado en datos ha mejorado la consistencia en un 53% año tras año. Todos los diseños se someten a simulaciones de ciclos de lavado que replican 5 años de uso, asegurando que la fijación del color y la retención de la forma cumplan con los estándares MIL-SPEC.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            },
+            fr: {
+                translation: {
+                    "topBarEmail": "E-mail : contact@unitedpunch.com",
+                    "topBarContact": "Contact : +123-456-7890",
+                    "navHome": "Accueil",
+                    "navAbout": "À Propos",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vecteurs",
+                    "navPatches": "Patchs",
+                    "navEmbroidery": "Broderie",
+                    "bannerHeading": "Conversion Raster en Art Vectoriel",
+                    "bannerParagraph": "Nous transformons vos images en art vectoriel de haute qualité. Notre équipe de plus de 150 artistes vectoriels garantit les meilleurs fichiers, y compris AI, PSD, CorelDraw, et plus encore.",
+                    "bannerButton": "En savoir plus",
+                    "digitizingHeading": "Meilleure Entreprise de Numérisation aux États-Unis",
+                    "digitizingParagraph": "Bienvenue chez United Punch, l'une des entreprises de numérisation les plus estimées au monde. Nous allions innovation et précision pour transformer vos idées en designs numériques exceptionnels.",
+                    "feature1Heading": "Livraison Ultra-Rapide",
+                    "feature1Paragraph": "Notre équipe d'experts numérise vos designs en seulement 3 à 4 heures, garantissant une exécution rapide et de haute qualité.",
+                    "feature2Heading": "Précision de Haute Qualité",
+                    "feature2Paragraph": "Nous prêtons attention à chaque détail, convertissant vos designs en un format parfait et pixel-perfect.",
+                    "feature3Heading": "Équipe Compétente et Expérimentée",
+                    "feature3Paragraph": "Nos digitalizers et artistes vectoriels professionnels possèdent l'expérience nécessaire pour réaliser chaque projet selon les normes de l'industrie.",
+                    "feature4Heading": "Satisfaction Client",
+                    "feature4Paragraph": "Votre satisfaction est notre priorité absolue ! Nous livrons chaque projet avec perfection et dévouement.",
+                    "feature5Heading": "Portée Globale",
+                    "feature5Paragraph": "Peu importe où vous êtes, nos services sont disponibles dans le monde entier. Nous sommes là pour vous, partout !",
+                    "feature6Heading": "Pourquoi Nous Choisir ?",
+                    "feature6Paragraph": "Nous n'offrons pas seulement des services, nous proposons une expérience exceptionnelle avec une livraison rapide, la meilleure qualité et un support 24/7.",
+                    "blogHeading": "Quality Control in Modern Embroidery Production",
+                    "blogParagraph1": "Notre protocole de contrôle qualité en 7 étapes inclut des vérifications automatisées des points qui examinent 142 paramètres par design, de la cohérence de la tension aux risques de transfert de couleur. Le logiciel de simulation des tissus prédit les résultats de la broderie sur 58 types de matériaux, permettant des ajustements pré-production qui réduisent le nombre d'itérations de 70%.",
+                    "blogParagraph2": "Pour des applications critiques telles que les patchs militaires, nous utilisons une technologie d'alignement laser qui atteint une précision de 0,01 mm. Notre processus certifié ISO 9001 inclut le suivi par lot et des inspections avec un grossissement de 300 %, maintenant les taux de défaut en dessous de 0,2 % pendant 12 trimestres consécutifs.",
+                    "blogParagraph3": "Le système de surveillance en temps réel suit simultanément 18 variables de production, de l'humidité à la température des aiguilles. Cette approche basée sur les données a amélioré la cohérence de 53 % d'une année à l'autre. Tous les designs subissent des simulations de cycles de lavage reproduisant 5 ans d'utilisation, garantissant que la tenue des couleurs et la conservation de la forme respectent les normes MIL-SPEC.",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved."
+                }
+            }
+
+        };
+
+        // Initialize i18next with default language (English)
+        i18next.init({
+            lng: "en",
+            debug: false,
+            resources: resources
+        }, function (err, t) {
+            updateContent();
+        });
+
+        // Function to change language
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, function (err, t) {
+                updateContent();
+            });
+        }
+
+        // Update text for elements with data-i18n attributes
+        function updateContent() {
+            document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                const key = element.getAttribute("data-i18n");
+                element.innerHTML = i18next.t(key);
+            });
+        }
+    </script>
 </body>
-<script>
-    function showToast(message) {
-        toast.textContent = message;
-        toast.style.display = "block";
-        setTimeout(() => {
-            toast.style.display = "none";
-        }, 2000);  // Toast disappears after 2 seconds
-    }
-
-    function toggleMenu() {
-        const mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("active");
-    }
-    // JavaScript for Modal and Image Navigation
-    let currentImageIndex = 0;
-    const images = document.querySelectorAll(".gallery-item img");
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
-
-    // Open Modal
-    function openModal(index) {
-        currentImageIndex = index;
-        modalImage.src = images[currentImageIndex].src;
-        modal.style.display = "flex";
-    }
-
-    // Close Modal
-    function closeModal() {
-        modal.style.display = "none";
-    }
-
-    // Change Image
-    function changeImage(direction) {
-        currentImageIndex += direction;
-
-        // Loop images if out of bounds
-        if (currentImageIndex < 0) {
-            currentImageIndex = images.length - 1; // Go to the last image
-        } else if (currentImageIndex >= images.length) {
-            currentImageIndex = 0; // Go to the first image
-        }
-
-        // Update the modal image source
-        modalImage.src = images[currentImageIndex].src;
-    }
-
-    // Close Modal When Clicking Outside the Content
-    modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-
-
-</script>
-
-<script>
-    function toggleMenu() {
-        let menu = document.getElementById("mobileMenu");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-
-    // ✅ Theme Toggle Functionality
-    const themeToggle = document.getElementById("themeToggle");
-    const html = document.documentElement; // Select <html> for setting data-theme
-
-    // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem("theme") || "light";
-    html.setAttribute("data-theme", savedTheme);
-
-    // Toggle Theme on Button Click
-    themeToggle.addEventListener("click", function () {
-        let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-        // Apply New Theme
-        html.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme); // Save preference
-    });
-</script>
-
 
 </html>

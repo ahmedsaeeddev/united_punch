@@ -4,22 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - United Punch</title>
+    <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/patches.css">
-    <!-- <link rel="stylesheet" href="../css/blogs.css"> -->
-    <link rel="stylesheet" href="../css/patchesAnimate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include i18next CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.15/i18next.min.js"></script>
 </head>
 
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher" style="text-align: right; margin: 10px;">
+        <!-- Updated flags and order to match your provided image -->
+        <img onclick="changeLanguage('en')" src="../assets/img/america.png"/>
+        <img onclick="changeLanguage('de')" src="../assets/img/german.png"/>
+        <img onclick="changeLanguage('it')" src="../assets/img/italy.png"/>
+        <img onclick="changeLanguage('fr')" src="../assets/img/france.png"/>
+        <img onclick="changeLanguage('ja')" src="../assets/img/japan.png"/>
+        <img onclick="changeLanguage('sv')" src="../assets/img/sweden.png"/>
+        <img onclick="changeLanguage('es')" src="../assets/img/spain.png"/>
+        <img onclick="changeLanguage('nl')" src="../assets/img/netherlands.png"/>
+    </div>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar">
-                <div>Email: contact@unitedpunch.com</div>
-                <div>Contact: +123-456-7890</div>
+                <div data-i18n="topBarEmail">Email: contact@unitedpunch.com</div>
+                <div data-i18n="topBarContact">Contact: +123-456-7890</div>
             </div>
         </div>
     </div>
@@ -28,132 +41,103 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-links-left">
-                <a href="./index.html">Home</a>
-                <a href="../pages/about.html">About Us</a>
-                <a href="../pages/blogs.html">Blogs</a>
+                <a href="../index.html" data-i18n="navHome">Home</a>
+                <a href="../pages/about.html" data-i18n="navAbout">About Us</a>
+                <a href="../pages/blogs.html" data-i18n="navBlogs">Blogs</a>
             </div>
             <div class="navbar-logo">
                 <a href="../index.html">UNITED<img src="../assets/img/logo.png" alt="">PUNCH</a>
                 <a class="theme-toggle" id="themeToggle">🌙</a>
             </div>
             <div class="navbar-links-right">
-                <a href="../pages/vectors.html">Vectors</a>
-                <a href="../pages/patches.html">Patches</a>
-                <a href="../pages/embroidery.html">Embroidery</a>
+                <a href="../pages/vectors.html" data-i18n="navVectors">Vectors</a>
+                <a href="../pages/patches.html" data-i18n="navPatches">Patches</a>
+                <a href="../pages/embroidery.html" data-i18n="navEmbroidery">Embroidery</a>
             </div>
             <button class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="../index.html" onclick="toggleMenu()">Home</a>
-            <a href="../pages/about.html" onclick="toggleMenu()">About Us</a>
-            <a href="../pages/blogs.html" onclick="toggleMenu()">Blogs</a>
-            <a href="../pages/vectors.html" onclick="toggleMenu()">Vectors</a>
-            <a href="../pages/patches.html" onclick="toggleMenu()">Patches</a>
-            <a href="../pages/embroidery.html" onclick="toggleMenu()">Embroidery</a>
+            <a href="../index.html" onclick="toggleMenu()" data-i18n="navHome">Home</a>
+            <a href="../pages/about.html" onclick="toggleMenu()" data-i18n="navAbout">About Us</a>
+            <a href="../pages/blogs.html" onclick="toggleMenu()" data-i18n="navBlogs">Blogs</a>
+            <a href="../pages/vectors.html" onclick="toggleMenu()" data-i18n="navVectors">Vectors</a>
+            <a href="../pages/patches.html" onclick="toggleMenu()" data-i18n="navPatches">Patches</a>
+            <a href="../pages/embroidery.html" onclick="toggleMenu()" data-i18n="navEmbroidery">Embroidery</a>
         </div>
-
     </nav>
-    <!-- Blogs Section -->
-    <section class="blogs-section">
-        <!-- Blog 2 -->
-        <div class="blog">
-            <div class="blog-content">
-                <h2>Patch vs Embroidery: Choosing the Right Application</h2>
-                <p class="main-paragraph">
-                    The decision between <span class="main">direct garment embroidery</span> and
-                    <span class="main">embroidered patches</span> hinges on fabric type, durability
-                    requirements, and design complexity. Our <span class="main">fabric compatibility
-                        matrix</span> helps clients choose the optimal solution - patches generally
-                    outperform direct embroidery on stretchy materials by 3:1 in longevity tests.
-                    The patented <span class="main">merrow border technique</span> we use creates
-                    reinforced edges that withstand 2.5x more abrasion than standard satin stitches.
-                </p>
-                <p class="main-paragraph">
-                    For high-density designs, our <span class="main">3D stabilization method</span>
-                    combines water-soluble stabilizer with strategic underlay patterns to prevent
-                    puckering. Recent innovations in <span class="main">gradient digitizing</span>
-                    allow smooth color transitions using up to 8 thread colors without visible
-                    banding. Our military-grade patches feature <span class="main">UV-resistant
-                        threads</span> and anti-fray treatments that maintain color vibrancy for
-                    5+ years in outdoor conditions.
-                </p>
-                <p class="main-paragraph">
-                    The <span class="main">push-pull compensation</span> algorithms we developed
-                    reduce logo distortion by 62% on curved surfaces like baseball caps.
-                    Through <span class="main">dynamic density adjustment</span>, we optimize
-                    stitch counts in real-time based on fabric stretch coefficients - a
-                    breakthrough that's reduced customer rejections by 85% since implementation.
-                </p>
-            </div>
-            <div class="blog-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmMOsGPLZq3gbDRvIigeaDxI6nkCbQPufeuQ&s"
-                    alt="Patch Comparison">
-            </div>
-        </div>
 
-
-        <!-- Blog 4 -->
-        <div class="blog">
-            <div class="blog-content">
-                <h2>Quality Control in Modern Embroidery Production</h2>
-                <p class="main-paragraph">
-                    Our 7-stage <span class="main">quality assurance protocol</span> includes
-                    <span class="main">automated stitch auditing</span> that checks 142
-                    parameters per design, from tension consistency to color bleed risks.
-                    The <span class="main">fabric simulation software</span> predicts
-                    embroidery outcomes across 58 material types, allowing pre-production
-                    adjustments that reduce sampling iterations by 70%.
+    <!-- About Banner Section -->
+    <section class="about-banner">
+        <div class="content-container">
+            <!-- Text Section -->
+            <div class="about-text">
+                <h1 data-i18n="aboutHeading">About United Punch</h1>
+                <p data-i18n="aboutParagraph1">
+                    Welcome to United Punch, your trusted partner for premium digitizing services. With years of
+                    experience in delivering unparalleled quality, we pride ourselves on transforming your creative
+                    ideas into precision-driven embroidery designs. Our expert team of digitizers combines innovation
+                    with attention to detail, ensuring perfection in every stitch.
                 </p>
-                <p class="main-paragraph">
-                    For mission-critical applications like <span class="main">military patches</span>,
-                    we employ <span class="main">laser alignment technology</span> achieving
-                    0.01mm registration accuracy. Our <span class="main">ISO 9001-certified</span>
-                    process includes batch-level tracking and 300% magnification inspections,
-                    maintaining defect rates below 0.2% for 12 consecutive quarters.
-                </p>
-                <p class="main-paragraph">
-                    The <span class="main">real-time monitoring system</span> tracks 18
-                    production variables simultaneously, from humidity levels to needle
-                    temperature. This data-driven approach has improved consistency metrics
-                    by 53% year-over-year. All designs undergo <span class="main">wash cycle
-                        simulations</span> replicating 5 years of use, ensuring color fastness
-                    and shape retention meet MIL-SPEC standards.
+                <p data-i18n="aboutParagraph2">
+                    Whether you're looking for custom embroidery digitizing, vector art, or bulk orders, United Punch is
+                    dedicated to meeting your needs with unmatched turnaround times and exceptional service.
                 </p>
             </div>
-            <div class="blog-image">
-                <img src="https://evocon.com/wp-content/uploads/2022/05/evocon-at-whiteboard-1200x698.jpeg.webp"
-                    alt="Quality Assurance">
+            <!-- Image Section -->
+            <div class="about-image">
+                <img src="https://prodigitizing.com/wp-content/uploads/2024/05/tigers-hp.png"
+                    alt="United Punch Digitizing Services">
             </div>
         </div>
     </section>
+
+    <!-- Additional About Text Section -->
+    <section class="about-more">
+        <div class="more-text-container">
+            <h2 data-i18n="aboutWhyHeading">Why Choose United Punch?</h2>
+            <p data-i18n="aboutWhyParagraph1">
+                At United Punch, we understand the importance of precision and timely delivery. Our commitment to
+                excellence is reflected in our attention to detail and a streamlined process that ensures every project
+                is completed efficiently without compromising on quality.
+            </p>
+            <p data-i18n="aboutWhyParagraph2">
+                With our advanced tools and a dedicated team, we provide services that go beyond expectations. From
+                small businesses to large enterprises, United Punch is equipped to handle orders of any scale with
+                professionalism and expertise.
+            </p>
+            <p data-i18n="aboutWhyParagraph3">
+                When you choose United Punch, you choose reliability, creativity, and a partner that values your vision.
+                Experience the difference with our premium digitizing services today!
+            </p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo and Working Hours -->
             <div class="footer-section">
                 <img src="../assets/img/logo.png" alt="United Punch Logo" class="footer-logo">
-                <p>Hours: Monday-Friday<br> 24 / 7 Working.</p>
+                <p class="main-paragraph" data-i18n="footerHours">Hours: Monday-Friday<br>24 / 7 Working.</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
                     <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-
             <!-- Resources Links -->
             <div class="footer-section">
-                <h3>Resources</h3>
+                <h3 data-i18n="footerResources">Resources</h3>
                 <ul>
                     <li><a href="#">Our Blog</a></li>
                     <li><a href="#">Free Design Library</a></li>
                 </ul>
             </div>
-
             <!-- About Links -->
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footerAbout">About</h3>
                 <ul>
                     <li><a href="#">Embroidery Digitizing Services</a></li>
                     <li><a href="#">Patches</a></li>
@@ -163,49 +147,276 @@
                     <li><a href="#">Our Professionals</a></li>
                 </ul>
             </div>
-
             <!-- Contact Info -->
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Text: <a href="tel:8774425675">(877) 442-5675</a></p>
-                <p>Email: <a href="mailto:design@unitedpunch.com">design@unitedpunch.com</a></p>
-                <p>For international calls: <br><a href="tel:6195911084">619-591-1084</a></p>
+                <h3 data-i18n="footerContact">Contact Us</h3>
+                <p class="main-paragraph">Text: <a href="tel:8774425675">(877) 442-5675</a></p>
+                <p class="main-paragraph">Email: <a href="mailto:design@unitedpunch.com">design@unitedpunch.com</a></p>
+                <p class="main-paragraph">For international calls: <br><a href="tel:6195911084">619-591-1084</a></p>
                 <h4>Contact Sales & Support:</h4>
-                <p><a href="tel:8774425675">(877) 442-5675</a></p>
-                <p><a href="#newsletter">Get Quote</a></p>
+                <p class="main-paragraph"><a href="tel:8774425675">(877) 442-5675</a></p>
+                <p class="main-paragraph"><a href="#newsletter">Get Quote</a></p>
             </div>
         </div>
-
         <!-- Endnote -->
         <div class="footer-endnote">
-            <p> Terms and Conditions | Privacy Policy | &copy; 2025 United Punch All Rights Reserved.</p>
+            <p data-i18n="footerEndnote">
+                Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.
+            </p>
         </div>
     </footer>
 
+    <!-- External Scripts -->
+    <script src="../scripts/index.js"></script>
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const htmlElement = document.documentElement;
+        const savedTheme = localStorage.getItem("theme") || "light";
+        htmlElement.setAttribute("data-theme", savedTheme);
+
+        themeToggle.addEventListener("click", function () {
+            let newTheme = htmlElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            htmlElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        });
+    </script>
+
+    <!-- i18next Integration Script -->
+    <script>
+        // Define translation resources for 8 languages
+        const resources = {
+            en: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "About Us",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectors",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Embroidery",
+                    "footerHours": "Hours: Monday-Friday<br>24 / 7 Working.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "About United Punch",
+                    "aboutParagraph1": "Welcome to United Punch, your trusted partner for premium digitizing services. With years of experience in delivering unparalleled quality, we pride ourselves on transforming your creative ideas into precision-driven embroidery designs. Our expert team of digitizers combines innovation with attention to detail, ensuring perfection in every stitch.",
+                    "aboutParagraph2": "Whether you're looking for custom embroidery digitizing, vector art, or bulk orders, United Punch is dedicated to meeting your needs with unmatched turnaround times and exceptional service.",
+                    "aboutWhyHeading": "Why Choose United Punch?",
+                    "aboutWhyParagraph1": "At United Punch, we understand the importance of precision and timely delivery. Our commitment to excellence is reflected in our attention to detail and a streamlined process that ensures every project is completed efficiently without compromising on quality.",
+                    "aboutWhyParagraph2": "With our advanced tools and a dedicated team, we provide services that go beyond expectations. From small businesses to large enterprises, United Punch is equipped to handle orders of any scale with professionalism and expertise.",
+                    "aboutWhyParagraph3": "When you choose United Punch, you choose reliability, creativity, and a partner that values your vision. Experience the difference with our premium digitizing services today!"
+                }
+            },
+            de: {
+                translation: {
+                    "topBarEmail": "E-Mail: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Startseite",
+                    "navAbout": "Über Uns",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vektoren",
+                    "navPatches": "Aufnäher",
+                    "navEmbroidery": "Stickerei",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "Über United Punch",
+                    "aboutParagraph1": "Willkommen bei United Punch, Ihrem vertrauenswürdigen Partner für hochwertige Digitalisierungsdienstleistungen. Mit jahrelanger Erfahrung in der Lieferung unübertroffener Qualität sind wir stolz darauf, Ihre kreativen Ideen in präzisionsgetriebene Stickdesigns zu verwandeln. Unser Expertenteam digitalisiert Ihre Designs mit Innovation und Liebe zum Detail, um in jedem Stich Perfektion zu gewährleisten.",
+                    "aboutParagraph2": "Ob Sie maßgeschneiderte Stickdigitalisierung, Vektor Art oder Großbestellungen suchen – United Punch setzt sich dafür ein, Ihre Bedürfnisse mit unvergleichlichen Lieferzeiten und exzellentem Service zu erfüllen.",
+                    "aboutWhyHeading": "Warum United Punch wählen?",
+                    "aboutWhyParagraph1": "Bei United Punch verstehen wir, wie wichtig Präzision und termingerechte Lieferung sind. Unser Engagement für Exzellenz spiegelt sich in unserer Liebe zum Detail und in einem optimierten Prozess wider, der sicherstellt, dass jedes Projekt effizient und ohne Qualitätsverlust abgeschlossen wird.",
+                    "aboutWhyParagraph2": "Mit unseren fortschrittlichen Werkzeugen und einem engagierten Team sind wir in der Lage, Ihre Erwartungen zu übertreffen – von kleinen Unternehmen bis hin zu großen Konzernen.",
+                    "aboutWhyParagraph3": "Wenn Sie sich für United Punch entscheiden, wählen Sie Zuverlässigkeit, Kreativität und einen Partner, der Ihre Vision schätzt. Erleben Sie den Unterschied noch heute!"
+                }
+            },
+            fr: {
+                translation: {
+                    "topBarEmail": "E-mail : contact@unitedpunch.com",
+                    "topBarContact": "Contact : +123-456-7890",
+                    "navHome": "Accueil",
+                    "navAbout": "À Propos",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vecteurs",
+                    "navPatches": "Patchs",
+                    "navEmbroidery": "Broderie",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "À Propos de United Punch",
+                    "aboutParagraph1": "Bienvenue chez United Punch, votre partenaire de confiance pour des services de digitalisation premium. Forts de nombreuses années d'expérience et d'une qualité inégalée, nous sommes fiers de transformer vos idées créatives en designs de broderie précis. Notre équipe d'experts digitaliseurs allie innovation et souci du détail pour garantir la perfection à chaque point.",
+                    "aboutParagraph2": "Que vous recherchiez une digitalisation sur mesure pour vos broderies, de l'art vectoriel ou des commandes en gros, United Punch s'engage à répondre à vos besoins avec des délais inégalés et un service exceptionnel.",
+                    "aboutWhyHeading": "Pourquoi choisir United Punch ?",
+                    "aboutWhyParagraph1": "Chez United Punch, nous comprenons l'importance de la précision et du respect des délais. Notre engagement envers l'excellence se reflète dans notre attention aux détails et dans un processus optimisé qui assure l'efficacité de chaque projet sans compromettre la qualité.",
+                    "aboutWhyParagraph2": "Avec nos outils avancés et notre équipe dévouée, nous offrons des services qui dépassent vos attentes, que vous soyez une petite entreprise ou une grande société.",
+                    "aboutWhyParagraph3": "En choisissant United Punch, vous optez pour la fiabilité, la créativité et un partenaire qui valorise votre vision. Découvrez la différence dès aujourd'hui !"
+                }
+            },
+            it: {
+                translation: {
+                    "topBarEmail": "Email: contact@unitedpunch.com",
+                    "topBarContact": "Contatto: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Chi Siamo",
+                    "navBlogs": "Blog",
+                    "navVectors": "Vettori",
+                    "navPatches": "Patch",
+                    "navEmbroidery": "Ricamo",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "Chi Siamo - United Punch",
+                    "aboutParagraph1": "Benvenuti in United Punch, il vostro partner di fiducia per servizi di digitalizzazione di alta qualità. Con anni di esperienza nel garantire una qualità impareggiabile, siamo orgogliosi di trasformare le vostre idee creative in design di ricamo di precisione. Il nostro team di esperti digitalizzatori unisce innovazione e attenzione ai dettagli per assicurare la perfezione in ogni punto.",
+                    "aboutParagraph2": "Che si tratti di digitalizzazione personalizzata per il ricamo, arte vettoriale o ordini in grandi quantità, United Punch si impegna a soddisfare le vostre esigenze con tempi di consegna imbattibili e un servizio eccezionale.",
+                    "aboutWhyHeading": "Perché scegliere United Punch?",
+                    "aboutWhyParagraph1": "Da United Punch comprendiamo l'importanza della precisione e della puntualità. Il nostro impegno per l'eccellenza si riflette nella cura dei dettagli e in un processo ottimizzato che garantisce l'efficienza di ogni progetto senza compromettere la qualità.",
+                    "aboutWhyParagraph2": "Con strumenti avanzati e un team dedicato, offriamo servizi che superano le aspettative, sia per le piccole imprese che per le grandi aziende.",
+                    "aboutWhyParagraph3": "Scegliendo United Punch, scegli affidabilità, creatività e un partner che valorizza la vostra visione. Scoprite la differenza con i nostri servizi di digitalizzazione di alta qualità oggi stesso!"
+                }
+            },
+            ja: {
+                translation: {
+                    "topBarEmail": "メール: contact@unitedpunch.com",
+                    "topBarContact": "連絡先: +123-456-7890",
+                    "navHome": "ホーム",
+                    "navAbout": "会社概要",
+                    "navBlogs": "ブログ",
+                    "navVectors": "ベクター",
+                    "navPatches": "パッチ",
+                    "navEmbroidery": "刺繍",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "United Punchについて",
+                    "aboutParagraph1": "United Punchへようこそ。私たちは最高品質のデジタイズサービスを提供する信頼のおけるパートナーです。長年にわたる実績と卓越した品質により、皆様のクリエイティブなアイデアを精密な刺繍デザインに変換しています。私たちの専門チームは、革新と細部へのこだわりをもって、すべてのステッチに完璧を追求します。",
+                    "aboutParagraph2": "カスタム刺繍デジタイズ、ベクターアート、または大量注文をご希望の場合でも、United Punchは迅速な納品と卓越したサービスで皆様のニーズにお応えします。",
+                    "aboutWhyHeading": "なぜUnited Punchを選ぶのか？",
+                    "aboutWhyParagraph1": "United Punchでは、精度と迅速な納品の重要性を理解しています。私たちの卓越性へのこだわりは、細部への配慮と効率的なプロセスに反映され、品質を損なうことなくすべてのプロジェクトが完了されます。",
+                    "aboutWhyParagraph2": "最新のツールと専任のチームにより、私たちは期待を上回るサービスを提供します。小規模企業から大手企業まで、United Punchはあらゆる規模の注文にプロフェッショナルに対応します。",
+                    "aboutWhyParagraph3": "United Punchを選ぶことで、信頼性、創造性、そしてお客様のビジョンを大切にするパートナーを手に入れることができます。ぜひ、私たちの高品質なデジタイズサービスの違いを体験してください！"
+                }
+            },
+            sv: {
+                translation: {
+                    "topBarEmail": "E-post: contact@unitedpunch.com",
+                    "topBarContact": "Kontakt: +123-456-7890",
+                    "navHome": "Hem",
+                    "navAbout": "Om Oss",
+                    "navBlogs": "Bloggar",
+                    "navVectors": "Vektorer",
+                    "navPatches": "Märken",
+                    "navEmbroidery": "Broderi",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "Om United Punch",
+                    "aboutParagraph1": "Välkommen till United Punch, din pålitliga partner för premium digitaliseringstjänster. Med många års erfarenhet av att leverera oöverträffad kvalitet är vi stolta över att förvandla dina kreativa idéer till precisa broderidesigner. Vårt expertteam digitaliserar dina designer med innovation och noggrannhet, vilket säkerställer perfektion i varje stygn.",
+                    "aboutParagraph2": "Oavsett om du söker skräddarsydd digitalisering för broderi, vektorart eller bulkbeställningar, är United Punch dedikerat att möta dina behov med oöverträffade leveranstider och exceptionell service.",
+                    "aboutWhyHeading": "Varför välja United Punch?",
+                    "aboutWhyParagraph1": "Hos United Punch förstår vi vikten av precision och snabb leverans. Vår strävan efter excellens återspeglas i vår noggrannhet och ett optimerat arbetsflöde som säkerställer att varje projekt slutförs effektivt utan att kompromissa med kvaliteten.",
+                    "aboutWhyParagraph2": "Med våra avancerade verktyg och vårt dedikerade team erbjuder vi tjänster som överträffar förväntningarna – från små företag till stora koncerner.",
+                    "aboutWhyParagraph3": "När du väljer United Punch väljer du pålitlighet, kreativitet och en partner som värdesätter din vision. Upplev skillnaden med våra premium digitaliseringstjänster redan idag!"
+                }
+            },
+            nl: {
+                translation: {
+                    "topBarEmail": "E-mail: contact@unitedpunch.com",
+                    "topBarContact": "Contact: +123-456-7890",
+                    "navHome": "Home",
+                    "navAbout": "Over Ons",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectoren",
+                    "navPatches": "Patches",
+                    "navEmbroidery": "Borduurwerk",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "Over United Punch",
+                    "aboutParagraph1": "Welkom bij United Punch, uw vertrouwde partner voor hoogwaardige digitaliseringsdiensten. Met jarenlange ervaring in het leveren van ongeëvenaarde kwaliteit zijn wij trots op het omzetten van uw creatieve ideeën in nauwkeurige borduurontwerpen. Ons deskundige team digitaliseert uw ontwerpen met innovatie en oog voor detail, zodat elke steek perfect is.",
+                    "aboutParagraph2": "Of u nu op zoek bent naar maatwerk digitalisering voor borduurwerk, vector art of bulkbestellingen, United Punch zet zich in om aan uw wensen te voldoen met ongeëvenaarde doorlooptijden en uitstekende service.",
+                    "aboutWhyHeading": "Waarom United Punch kiezen?",
+                    "aboutWhyParagraph1": "Bij United Punch begrijpen we hoe belangrijk precisie en tijdige levering zijn. Onze toewijding aan uitmuntendheid komt tot uiting in onze aandacht voor detail en een gestroomlijnd proces dat ervoor zorgt dat elk project efficiënt wordt voltooid zonder concessies te doen aan de kwaliteit.",
+                    "aboutWhyParagraph2": "Met onze geavanceerde tools en een toegewijd team bieden wij diensten die uw verwachtingen overtreffen, van kleine bedrijven tot grote ondernemingen.",
+                    "aboutWhyParagraph3": "Als u kiest voor United Punch, kiest u voor betrouwbaarheid, creativiteit en een partner die uw visie waardeert. Ervaar vandaag nog het verschil met onze premium digitaliseringsdiensten!"
+                }
+            },
+            es: {
+                translation: {
+                    "topBarEmail": "Correo: contact@unitedpunch.com",
+                    "topBarContact": "Contacto: +123-456-7890",
+                    "navHome": "Inicio",
+                    "navAbout": "Sobre Nosotros",
+                    "navBlogs": "Blogs",
+                    "navVectors": "Vectores",
+                    "navPatches": "Parches",
+                    "navEmbroidery": "Bordado",
+                    "footerHours": "Hours: Monday-Friday<br>6:00am-4:30pm PST.",
+                    "footerResources": "Resources",
+                    "footerAbout": "About",
+                    "footerContact": "Contact Us",
+                    "footerEndnote": "Terms and Conditions | Privacy Policy | © 2025 United Punch All Rights Reserved.",
+                    "aboutHeading": "Acerca de United Punch",
+                    "aboutParagraph1": "Bienvenido a United Punch, su socio de confianza para servicios de digitalización premium. Con años de experiencia ofreciendo calidad inigualable, nos enorgullece transformar sus ideas creativas en diseños de bordado precisos. Nuestro equipo de expertos digitalizadores combina innovación con atención al detalle para garantizar la perfección en cada puntada.",
+                    "aboutParagraph2": "Ya sea que busque digitalización personalizada de bordados, arte vectorial o pedidos al por mayor, United Punch se dedica a satisfacer sus necesidades con tiempos de entrega incomparables y un servicio excepcional.",
+                    "aboutWhyHeading": "¿Por qué elegir United Punch?",
+                    "aboutWhyParagraph1": "En United Punch entendemos la importancia de la precisión y la entrega oportuna. Nuestro compromiso con la excelencia se refleja en nuestra atención a los detalles y en un proceso optimizado que garantiza que cada proyecto se complete de manera eficiente sin comprometer la calidad.",
+                    "aboutWhyParagraph2": "Con nuestras herramientas avanzadas y un equipo dedicado, ofrecemos servicios que superan las expectativas, tanto para pequeñas empresas como para grandes corporaciones.",
+                    "aboutWhyParagraph3": "Al elegir United Punch, usted elige confiabilidad, creatividad y un socio que valora su visión. ¡Experimente la diferencia con nuestros servicios de digitalización premium hoy mismo!"
+                }
+            }
+        };
+
+        // Initialize i18next with default language (English)
+        i18next.init(
+            {
+                lng: "en",
+                debug: false,
+                resources: resources
+            },
+            function (err, t) {
+                updateContent();
+            }
+        );
+
+        // Function to change language
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, function (err, t) {
+                updateContent();
+                // Dynamically set <html lang="..."> attribute
+                document.documentElement.setAttribute('lang', lang);
+            });
+        }
+
+        // Update text for elements with data-i18n attributes
+        function updateContent() {
+            document.querySelectorAll("[data-i18n]").forEach(function (element) {
+                const key = element.getAttribute("data-i18n");
+                element.innerHTML = i18next.t(key);
+            });
+        }
+    </script>
 </body>
-<script src="../scripts/index.js"></script>
-<script>
-    function toggleMenu() {
-        let menu = document.getElementById("mobileMenu");
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    }
-
-    // ✅ Theme Toggle Functionality
-    const themeToggle = document.getElementById("themeToggle");
-    const html = document.documentElement; // Select <html> for setting data-theme
-
-    // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem("theme") || "light";
-    html.setAttribute("data-theme", savedTheme);
-
-    // Toggle Theme on Button Click
-    themeToggle.addEventListener("click", function () {
-        let newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
-        // Apply New Theme
-        html.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme); // Save preference
-    });
-</script>
 
 </html>
